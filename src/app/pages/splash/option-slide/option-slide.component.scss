@@ -1,0 +1,16 @@
+@import "./../splash.page.scss";
+
+.heading {
+  font-size: 40px;
+}
+
+.img-box {
+    display: flex;
+    position: relative;
+
+    .svg-select {
+        position: absolute;
+        right: 0;
+        transform: translateY(-20%);
+    }
+}

@@ -1,0 +1,52 @@
+@import "./../splash.page.scss";
+.fp-outer-544 {
+  width: 100%;
+  height: 100%;
+  background: #f3c14e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  .main-image-section {
+    height: calc(100% - 326px);
+    background: #f3c14e;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .black-box-section {
+    height: 326px;
+    background: var(--ion-color-dark-tint);
+    border-radius: 25px 25px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .outer-heading {
+      height: 215px;
+    }
+    .heading-box {
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      // width: 310px;
+      padding: 20px;
+      .heading {
+        font-size: 42px;
+      }
+      .subheading {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 2px;
+      }
+      .mb-rt {
+        img {
+          height: 57px;
+        }
+      }
+    }
+  }
+}

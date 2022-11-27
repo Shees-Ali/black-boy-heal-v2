@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "BebasNeueThin";
+  font-style: normal;
+  src: url("./../assets/fonts/BebasNeue\ Thin.ttf");
+}
+
+@font-face {
+  font-family: "BebasNeueRegular";
+  font-style: normal;
+  src: url("./../assets/fonts/BebasNeue\ Regular.ttf");
+}
+
+@font-face {
+  font-family: "BebasNeueLight";
+  font-style: normal;
+  src: url("./../assets/fonts/BebasNeue\ Light.ttf");
+}
+
+@font-face {
+  font-family: "BebasNeueBook";
+  font-style: normal;
+  src: url("./../assets/fonts/BebasNeue\ Book.ttf");
+}
+
+@font-face {
+  font-family: "BebasNeueBold";
+  font-style: normal;
+  src: url("./../assets/fonts/BebasNeue\ Bold.ttf");
+}
+
+.bebas {
+  font-family: "BebasNeueRegular";
+}
+
+.bebas.thin {
+  font-family: "BebasNeueThin";
+}
+
+.bebas.light {
+  font-family: "BebasNeueLight";
+}
+
+.bebas.book {
+  font-family: "BebasNeueBook";
+}
+
+.bebas.bold {
+  font-family: "BebasNeueBold";
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  src: url("./../assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "PoppinsMedium";
+  font-style: normal;
+  src: url("./../assets/fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "PoppinsMediumItalic";
+  font-style: normal;
+  src: url("./../assets/fonts/Poppins-MediumItalic.ttf");
+}
+
+@font-face {
+  font-family: "PoppinsSemibold";
+  font-style: normal;
+  src: url("./../assets/fonts/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "PoppinsSemiboldItalic";
+  font-style: normal;
+  src: url("./../assets/fonts/Poppins-ExtraBoldItalic.ttf");
+}
+
+.poppins {
+  font-family: "Poppins";
+}
+
+.poppins.medium {
+  font-family: "PoppinsMedium";
+}
+
+.poppins.medium.italic {
+  font-family: "PoppinsMediumItalic";
+}
+
+.poppins.semibold {
+  font-family: "PoppinsSemibold";
+}
+.poppins.semibold.italic {
+  font-family: "PoppinsSemiboldItalic";
+}
