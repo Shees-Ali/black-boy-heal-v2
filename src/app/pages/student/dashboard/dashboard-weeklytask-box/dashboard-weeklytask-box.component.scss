@@ -1,0 +1,82 @@
+.task-sc {
+	background: black;
+	padding: 20px 20px;
+}
+
+
+.tast-hd {
+	display: flex;
+	justify-content: space-between;
+
+
+
+	h3 {
+		color: #fff;
+		font-size: 16px;
+		font-weight: 500;
+
+	}
+
+	a {
+		color: #fff;
+		text-decoration: none;
+		font-size: 11px;
+	}
+}
+
+
+.counter-sc {
+	background: #2EC4B6;
+	display: flex;
+	padding: 15px;
+	border-radius: 10px;
+	justify-content: space-between;
+	align-items: center;
+
+
+	p {
+		font-size: 14px;
+		color: #fff;
+		margin: 0px;
+		margin-bottom: 5px;
+
+	}
+
+	h5 {
+		color: #ffff;
+		font-weight: 600;
+		margin: 0px;
+		font-size: 12px;
+		margin-bottom: 5px;
+
+	}
+
+	button {
+		width: 16px;
+		height: 38px;
+		text-align: center;
+		background: #20A79A;
+		border-radius: 30px;
+		width: 160px;
+		margin-top: 5px;
+		font-weight: 600;
+		color: #fff;
+		text-transform: uppercase;
+	}
+
+
+
+}
+
+.cn-tr {
+	font-size: 12px;
+	text-align: center;
+	color: #ffff;
+	font-weight: 600;
+	width: 60px;
+	background-color: #34CDBE;
+	border-radius: 30px;
+	margin-bottom: 5px;
+	padding: 10px;
+
+}

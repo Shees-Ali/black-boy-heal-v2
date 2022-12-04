@@ -1,0 +1,82 @@
+.therapist-sc {
+    background-color: black;
+    padding: 20px;
+}
+
+.th-sc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+        color: #fff;
+        font-size: 16px;
+        margin-top: 0px;
+        font-weight: 500;
+
+    }
+
+    a {
+        color: #fff;
+        font-size: 14px;
+        text-decoration: none;
+        font-weight: 500;
+    }
+}
+
+
+.rating-sc {
+    background-color: #293132;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+
+
+
+}
+
+.rt-profile {
+    width: 77px;
+    height: 77px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.rating-content {
+    padding-left: 10px;
+
+    h4 {
+        color: #ffff;
+        margin: 0;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: capitalize;
+
+    }
+
+
+    h6 {
+        font-size: 12px;
+        margin: 0;
+        color: #9499A2;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+
+    p {
+        margin: 0;
+        color: #9499A2;
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .rt-box {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px
+    }
+
+}

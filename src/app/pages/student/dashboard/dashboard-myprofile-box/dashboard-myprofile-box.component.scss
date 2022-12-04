@@ -1,0 +1,92 @@
+.user-profile-sc {
+    background-color: black;
+    padding: 20px;
+}
+
+.cover-photo {
+    img {
+        height: 145px;
+        object-fit: cover;
+        width: 346px;
+        border-radius: 25px 25px 0px 0px;
+    }
+}
+
+
+
+.profile {
+    text-align: center;
+    position: relative;
+    height: 70px;
+
+    img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 100px;
+        position: absolute;
+        left: 27%;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.profile-bx {
+    background: #1E2324;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.pro-content {
+    h2 {
+        color: #fff;
+        font-weight: 600;
+    }
+
+    p {
+        margin: 0;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+.user-profile-sc {
+    h3 {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        margin-top: 0px;
+    }
+}
+
+
+.my-pro {
+    background-color: #FFF017;
+    width: 129px;
+    height: 50px;
+    color: black;
+    text-transform: uppercase;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+button.chat {
+    background: transparent;
+    border: none;
+    height: 50px;
+    width: 50px;
+}
+
+.pr-act {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 26px 10px;
+
+    button {
+        margin: 5px;
+    }
+}

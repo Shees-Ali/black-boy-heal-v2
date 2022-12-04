@@ -1,0 +1,55 @@
+
+
+.date-main{
+	background: black;
+	padding: 20px;
+
+
+	h3{
+		color: #fff;
+		margin-bottom: 15px;
+		font-size: 16px;
+		font-weight: 500;
+		margin-top: 0px;
+	}
+
+	.dates{
+		display: flex;
+		justify-content:space-between;
+	}
+
+	button{
+		background: #fff;
+		height: 60.43px;
+		width: 36px;
+		border-radius: 8px;
+		
+		padding: 5px;
+		text-align: center;
+
+
+
+
+		p{
+			margin: 0;
+			margin-bottom: 10px;
+			font-weight: 500;
+			font-size: 11px;
+			text-align: center;
+
+		}
+
+		h4{
+			font-size: 17px;
+			margin: 0;
+			font-weight: bold;
+			text-align: center;
+		}
+
+
+	}
+}
+
+.active-date{
+			background-color: #FFF017 !important;
+		}
