@@ -1,0 +1,8 @@
+<svg id="Chart" xmlns="http://www.w3.org/2000/svg" width="126" height="126" viewBox="0 0 126 126">
+  <g id="Oval" fill="none">
+    <path d="M63,0A63,63,0,1,1,0,63,63,63,0,0,1,63,0Z" stroke="none"/>
+    <path d="M 63 10 C 33.77571105957031 10 10 33.77571105957031 10 63 C 10 92.22428894042969 33.77571105957031 116 63 116 C 92.22428894042969 116 116 92.22428894042969 116 63 C 116 33.77571105957031 92.22428894042969 10 63 10 M 63 0 C 97.7939453125 0 126 28.2060546875 126 63 C 126 97.7939453125 97.7939453125 126 63 126 C 28.2060546875 126 0 97.7939453125 0 63 C 0 28.2060546875 28.2060546875 0 63 0 Z" stroke="none" fill="#5ad5ca"/>
+  </g>
+  <path id="Oval-2" data-name="Oval" d="M50.221,0Z" transform="translate(12.779 5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="10" stroke-dasharray="183 54"/>
+  <text id="_86_" data-name="86%" transform="translate(63 70)" fill="#fff" font-size="21" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.05em"><tspan x="-23.877" y="0">00%</tspan></text>
+</svg>
