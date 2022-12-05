@@ -1,0 +1,123 @@
+.user-profile-main {
+  // border: 1px solid red;
+  height: 100vh;
+  .bg-img {
+    // border: 1px solid red;
+    height: 287px;
+    width: 427px;
+  }
+  .profile-img {
+    // border: 1px solid red;
+    width: 222px;
+    height: 222px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding: 4px;
+    position: relative;
+    top: -170px;
+    left: 85px;
+    z-index: 10;
+
+    img {
+      // border: 1px solid red;
+      width: 222px;
+      height: 222px;
+      border-radius: 50% !important;
+    }
+  }
+  .details-main {
+    // border: 1px solid green;
+    margin-top: -233px;
+    border-radius: 25px 25px 0 0;
+    width: 389px;
+    height: 674px;
+    position: relative;
+    z-index: 1;
+    background: #1e2324;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .user-name {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      .name {
+        font-size: 30px;
+        font-weight: 700;
+      }
+      .location {
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        // border: 1px solid red;
+        width: 122px;
+        height: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        img {
+          width: 12px;
+          height: 18px;
+          color: #ffffff;
+          z-index: 100;
+        }
+      }
+    }
+    .add-button {
+      width: 100%;
+      margin-top: 10px;
+      padding-left: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-around;
+      .button {
+        width: 166px !important;
+        height: 50px !important;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .button2 {
+        border: 1px solid #fff017;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+    .line {
+      width: 386px;
+      border: 0.5px solid #707070;
+      margin-top: 10px;
+    }
+    .about {
+      // border: 1px solid white;
+      margin-top: 10px;
+      width: 345px;
+      height: 208px;
+      .about-name {
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .desc {
+        font-size: 12px;
+        font-weight: 400;
+        color: #616271;
+      }
+    }
+  }
+  .slider {
+    // border: 1px solid red;
+    position: relative;
+    z-index: 20;
+    margin-top: -160px;
+    background: #1e2324;
+  }
+}

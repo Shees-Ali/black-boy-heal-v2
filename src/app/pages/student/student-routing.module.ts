@@ -27,10 +27,20 @@ const routes: Routes = [
             (m) => m.TaskManagerPageModule
           ),
       },
+
       {
-        path: 'profile',
+        path: 'student-chat',
         loadChildren: () =>
-          import('./profile/profile.module').then((m) => m.ProfilePageModule),
+          import('./student-chat/student-chat.module').then(
+            (m) => m.StudentChatPageModule
+          ),
+      },
+      {
+        path: 'student-profile',
+        loadChildren: () =>
+          import('./student-profile/student-profile.module').then(
+            (m) => m.StudentProfilePageModule
+          ),
       },
     ],
   },
