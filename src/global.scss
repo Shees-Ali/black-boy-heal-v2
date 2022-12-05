@@ -28,3 +28,12 @@
 // global.scss
 @import "node_modules/swiper/swiper.scss";
 @import "node_modules/@ionic/angular/css/ionic-swiper.css";
+
+.bg-black-shade {
+  background: #161819 !important;
+  --background: #161819 !important;
+}
+
+.header-md::after {
+    background-image: none;
+}

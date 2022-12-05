@@ -15,9 +15,16 @@ import { DashboardWorkbookBoxComponent } from './dashboard-workbook-box/dashboar
 import { DashboardMyprofileBoxComponent } from './dashboard-myprofile-box/dashboard-myprofile-box.component';
 import { DashboardFindTherapistBoxComponent } from './dashboard-find-therapist-box/dashboard-find-therapist-box.component';
 import { DashboardShopBoxComponent } from './dashboard-shop-box/dashboard-shop-box.component';
+import { SharedModule } from 'src/app/components/shared.module';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule, DashboardPageRoutingModule],
+  imports: [
+    CommonModule,
+    SharedModule,
+    FormsModule,
+    IonicModule,
+    DashboardPageRoutingModule,
+  ],
   declarations: [
     DashboardPage,
     WelcomeBoxComponent,

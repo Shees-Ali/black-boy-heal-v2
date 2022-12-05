@@ -27,6 +27,11 @@ const routes: Routes = [
             (m) => m.TaskManagerPageModule
           ),
       },
+      {
+        path: 'profile',
+        loadChildren: () =>
+          import('./profile/profile.module').then((m) => m.ProfilePageModule),
+      },
     ],
   },
 ];
