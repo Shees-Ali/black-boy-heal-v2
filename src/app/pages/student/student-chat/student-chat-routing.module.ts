@@ -17,14 +17,18 @@ const routes: Routes = [
     children: [
       {
         path: 'chat-box',
-        component: ChatBoxComponent
+        loadChildren: () =>
+          import('./chat-box/chat-box.module').then((m) => m.ChatBoxModule),
       },
       {
         path: 'messages-room',
-        component: MessagesRoomComponent
+        loadChildren: () =>
+          import('./messages-room/messages-room.module').then(
+            (m) => m.MessagesRoomModule
+          ),
       },
-    ]
-  }, 
+    ],
+  },
 ];
 
 @NgModule({

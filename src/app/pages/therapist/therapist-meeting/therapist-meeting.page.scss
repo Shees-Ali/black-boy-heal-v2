@@ -1,0 +1,243 @@
+.therapist-meeting {
+  background: #000;
+  height: 100vh;
+  overflow: scroll;
+  .header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    margin-top: 20px;
+    // border: 1px solid red;
+    margin-left: 15px;
+    span {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+  .schedule {
+    // border: 1px solid red;
+    height: 48px;
+    width: 346px;
+    border-radius: 12px;
+    margin: auto;
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #f2f2f4;
+    .past {
+      width: 130px;
+      height: 36px;
+      border-radius: 12px;
+      // border: 1px solid #707070;
+      font-size: 12px;
+      color: #898a90;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .today {
+      width: 130px;
+      height: 36px;
+      border-radius: 12px;
+      // border: 1px solid #707070;
+      font-size: 12px;
+      color: #1b1b1b;
+      background: rgb(255, 255, 255);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .upcoming {
+      width: 130px;
+      height: 36px;
+      border-radius: 12px;
+      // border: 1px solid #707070;
+      font-size: 12px;
+      color: #898a90;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .join-meeting {
+    width: 346px;
+    height: 142px;
+    border-radius: 12px;
+    // border: 1px solid red;
+    margin: auto;
+    margin-top: 15px;
+    background: #293132;
+    .join-inner {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .text {
+        // border: 1px solid red;
+        height: 63px;
+        width: 124px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-top: 10px;
+        .on {
+          font-size: 12px;
+          color: #898a90;
+          margin-top: 2px;
+        }
+        .name {
+          font-size: 14px;
+          font-weight: 400;
+          color: #ffffff;
+          margin-top: 2px;
+        }
+        .zoom {
+          font-size: 12px;
+          color: #898a90;
+          margin-top: 2px;
+        }
+      }
+      .button {
+        border-radius: 8px;
+        height: 38px;
+        width: 171px;
+        font-size: 12px;
+        font-weight: 700;
+        // background: #2536df;
+        display: flex;
+        align-items: center;
+        // margin-top: 10px;
+        color: black !important;
+      }
+      .profile {
+        // border: 1px solid red;
+        // border: 1px solid red;
+        // background: red;
+        width: 100%;
+        height: 60px;
+        text-align: right;
+        margin-top: 8px;
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+        // position: relative;
+        // top: 100px;
+        .prof {
+          margin-right: 20px;
+          margin-top: 9px;
+          height: 48px;
+          width: 48px;
+          border-radius: 100%;
+          // border: 1px solid red;
+          float: right;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            // margin-right: 20px;
+            height: 42px;
+            width: 42px;
+            border-radius: 100%;
+            // border: 1px solid red;
+          }
+        }
+        .icons {
+          // border: 1px solid red;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          width: 107px;
+          height: 48px;
+          margin-top: 6px;
+          margin-left: 8px;
+          .icon1,
+          .icon2 {
+            background: #333a39;
+            height: 48px;
+            width: 48px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: #d1d2df;
+          }
+        }
+      }
+    }
+  }
+  .course {
+    // height: 154px;
+    width: 345px;
+    // border: 1px solid red;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    .title {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .see {
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+  .upcoming-meeting {
+    width: 346px;
+    height: 142px;
+    border-radius: 12px;
+    // border: 1px solid red;
+    margin: auto;
+    margin-top: 15px;
+    background: #ffffff;
+    .join-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .text {
+        // border: 1px solid red;
+        height: 63px;
+        width: 206px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 10px;
+        .on {
+          font-size: 12px;
+          color: #898a90;
+          margin-top: 2px;
+        }
+        .name {
+          font-size: 14px;
+          font-weight: 400;
+          color: #424247;
+          margin-top: 2px;
+        }
+        .zoom {
+          font-size: 12px;
+          color: #898a90;
+          margin-top: 2px;
+        }
+      }
+      .bell-icon {
+        margin-right: 10px;
+        // border: 1px solid red;
+        .bell {
+          // font-size: ;
+          color: #1aab95;
+        }
+      }
+    }
+  }
+}

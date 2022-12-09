@@ -1,0 +1,67 @@
+<header [title]="'Meetings'"></header>
+
+<ion-content>
+  <div class="therapist-meeting">
+    <div class="schedule">
+      <div class="past poppins">PAST</div>
+      <div class="today poppins">TODAY</div>
+      <div class="upcoming poppins">UPCOMING</div>
+    </div>
+    <div class="join-meeting">
+      <div class="join-inner">
+        <div class="text">
+          <span class="on poppins">ONGOING MEETING</span>
+          <span class="name poppins">Student Name</span>
+          <span class="zoom poppins">Via Zoom Call</span>
+        </div>
+        <ion-button class="button poppins">JOIN MEETING</ion-button>
+        <div class="profile">
+          <div class="prof">
+            <img src="../../../../assets/images/Mask.png" />
+          </div>
+          <div class="icons">
+            <div class="icon1">
+              <ion-icon name="videocam-outline"></ion-icon>
+            </div>
+            <div class="icon2">
+              <ion-icon name="mic-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="course">
+      <span class="title poppins">Upcoming Meetings</span>
+    </div>
+    <div class="upcoming-meeting">
+      <div class="join-inner">
+        <div class="text">
+          <span class="on poppins">MONDAY - 11/21/22 11:30 AM</span>
+          <span class="name poppins">Student Name</span>
+          <span class="zoom poppins">Via Zoom Call</span>
+        </div>
+        <div class="bell-icon">
+          <img src="../../../../assets/svgs/bell.svg" />
+        </div>
+      </div>
+    </div>
+    <div class="course">
+      <span class="title poppins">Past Meetings</span>
+    </div>
+    <div class="join-meeting" *ngFor="let item of [1, 2]">
+      <div class="join-inner">
+        <div class="text">
+          <span class="on poppins">ONGOING MEETING</span>
+          <span class="name poppins">Student Name</span>
+          <span class="zoom poppins">Via Zoom Call</span>
+        </div>
+        <ion-button class="button poppins">JOIN MEETING</ion-button>
+        <div class="profile">
+          <div class="prof">
+            <img src="../../../../assets/images/Mask.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

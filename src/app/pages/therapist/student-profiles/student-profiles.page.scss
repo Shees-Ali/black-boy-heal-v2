@@ -1,0 +1,173 @@
+.therapist-home {
+  background: #000;
+  height: 100vh;
+  overflow: scroll;
+  overflow: scroll;
+  .header {
+    margin-top: 20px;
+  }
+  .grid {
+    background: #000;
+    color: white;
+    // border: 1px solid red;
+    margin-top: 20px;
+    // overflow: scroll;
+    height: 700px;
+
+    .item-box {
+      border: 1px solid #293132;
+      background: #293132;
+      width: 165px;
+      height: 222px;
+      border-radius: 8px;
+      .item {
+        // border: 1px solid red;
+        width: 137px;
+        margin: auto;
+        margin-top: 10px;
+        // border-radius: 14px;
+
+        .img {
+          width: 137px;
+          height: 110px;
+          // border: 1px solid red;
+
+          width: 137px;
+          height: 110px;
+          border-radius: 14px;
+          margin: auto;
+          background: #54585f;
+        }
+        .student {
+          font-size: 13px;
+          font-weight: 400;
+          text-align: left;
+          margin-top: 6px;
+          color: #ffffffff;
+        }
+        .title {
+          // border: 1px solid red;
+          font-size: 11px;
+          font-weight: bold;
+          color: #9499a2;
+          margin-top: 6px;
+        }
+        .stars {
+          // border: 1px solid red;
+          width: 80%;
+          text-align: left;
+          color: #fbb509;
+          margin-top: 6px;
+          display: flex;
+          justify-content: space-around;
+          ion-icon {
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+    }
+  }
+  .course {
+    // height: 154px;
+    width: 345px;
+    // border: 1px solid red;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    .title {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .see {
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 500;
+    }
+  }
+  .join-meeting {
+    width: 346px;
+    height: 142px;
+    border-radius: 12px;
+    // border: 1px solid red;
+    margin: auto;
+    margin-top: 15px;
+    background: #293132;
+    .join-inner {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .text {
+        // border: 1px solid red;
+        height: 63px;
+        width: 124px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-top: 10px;
+        .on {
+          font-size: 12px;
+          color: #898a90;
+          margin-top: 2px;
+        }
+        .name {
+          font-size: 14px;
+          font-weight: 400;
+          color: #ffffff;
+          margin-top: 2px;
+        }
+        .zoom {
+          font-size: 12px;
+          color: #898a90;
+          margin-top: 2px;
+        }
+      }
+      .button {
+        // border: 1px solid red;
+        border-radius: 24px;
+        height: 38px;
+        width: 145px;
+        font-size: 12px;
+        font-weight: bold;
+        background: #2536df;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // margin-top: 10px;
+      }
+      .profile {
+        // border: 1px solid red;
+        // background: red;
+        width: 100%;
+        height: 60px;
+        text-align: right;
+        // position: relative;
+        // top: 100px;
+        .prof {
+          margin-right: 20px;
+          height: 48px;
+          width: 48px;
+          border-radius: 100%;
+          // border: 1px solid red;
+          float: right;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            // margin-right: 20px;
+            height: 42px;
+            width: 42px;
+            border-radius: 100%;
+            // border: 1px solid red;
+          }
+        }
+      }
+    }
+  }
+}

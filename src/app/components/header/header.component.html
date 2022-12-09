@@ -1,13 +1,16 @@
 <ion-header>
   <ion-toolbar class="bg-black-shade">
     <ion-buttons slot="start">
-      <ion-menu-button>
+      <ion-menu-button *ngIf="showMenu">
         <ion-icon src="assets/svgs/menu-icon.svg"></ion-icon>
       </ion-menu-button>
+      <ion-button  *ngIf="showBack">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
     </ion-buttons>
     <ion-title>{{ title }}</ion-title>
     <ion-buttons slot="end"> 
-      <ion-button>
+      <ion-button *ngIf="showBell">
         <ion-icon src="assets/svgs/bell-icon.svg"></ion-icon>
       </ion-button>
     </ion-buttons>

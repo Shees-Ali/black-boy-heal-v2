@@ -1,0 +1,45 @@
+<header [title]="'Profile'"></header>
+
+<ion-content>
+  <div class="therapist-profile">
+    <div class="user">
+      <div class="profile">
+        <div class="img">
+          <div class="line"></div>
+          <img src="../../../../assets/images/boy-first.png" />
+          <div class="inner-text">
+            <div class="profes poppins">Therapsit</div>
+            <p class="name poppins">Sabastan Moore</p>
+            <p class="lpc poppins">M.A LPC</p>
+          </div>
+        </div>
+        <div class="settings">
+          <ion-icon name="settings"></ion-icon>
+        </div>
+      </div>
+      <div class="buttons">
+        <div color="medium" class="edit">
+          <ion-icon name="pencil"></ion-icon>
+        </div>
+        <div color="medium" class="send">
+          <ion-icon name="send"></ion-icon>
+        </div>
+        <ion-button class="log">Log Out</ion-button>
+      </div>
+    </div>
+    <div class="course">
+      <span class="title poppins">Settings</span>
+    </div>
+    <div class="setting-outer" *ngFor="let item of [1, 2, 3, 4]">
+      <div class="setting-inner">
+        <div class="setting-icon">
+          <ion-icon name="send"></ion-icon>
+        </div>
+        <div class="set">
+          <div class="name poppins">Achivement</div>
+          <div class="text poppins">View Your Achivement</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

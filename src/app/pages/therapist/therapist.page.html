@@ -1,0 +1,54 @@
+<!-- <ion-content>
+  <swiper>
+    <ng-template swiperSlide>
+      <app-therapist-home class="full-width-height-23464"></app-therapist-home>
+    </ng-template>
+    <ng-template swiperSlide
+      ><app-student-profile
+        class="full-width-height-23464"
+      ></app-student-profile
+    ></ng-template>
+    <ng-template swiperSlide>
+      <app-therapist-profile
+        class="full-width-height-23464"
+      ></app-therapist-profile>
+    </ng-template>
+    <ng-template swiperSlide>
+      <app-therapist-meeting
+        class="full-width-height-23464"
+      ></app-therapist-meeting>
+    </ng-template>
+    <ng-template swiperSlide>
+      <app-therapist-stats></app-therapist-stats>
+    </ng-template>
+  </swiper>
+</ion-content> -->
+<ion-router-outlet>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button class="tab-btn" tab="dashboard">
+        <img src="assets/svgs/home.svg" />
+      </ion-tab-button>
+
+      <ion-tab-button class="tab-btn">
+        <img src="assets/svgs/task.svg" />
+      </ion-tab-button>
+
+      <ion-tab-button class="tab-btn" tab="student-chat">
+        <img src="assets/svgs/chat.svg" />
+      </ion-tab-button>
+
+      <ion-tab-button class="tab-btn" tab="task-manager">
+        <img src="assets/svgs/calender.svg" />
+      </ion-tab-button>
+
+      <ion-tab-button class="tab-btn" tab="shop">
+        <img src="assets/svgs/shop.svg" />
+      </ion-tab-button>
+
+      <ion-tab-button class="tab-btn" tab="student-profile">
+        <img src="assets/svgs/profile.svg" />
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-router-outlet>

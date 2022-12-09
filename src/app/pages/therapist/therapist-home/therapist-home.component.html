@@ -1,0 +1,101 @@
+<ion-content>
+  <div class="therapist-home">
+    <diV class="header">
+      <!-- <app-therapist-header></app-therapist-header> -->
+      <div class="user">
+        <div class="img">
+          <img src="../../../../assets/images/Ellipse 83.png" />
+        </div>
+        <div class="name-main">
+          <span class="greets poppins">Good Morning,</span>
+          <span class="name poppins">Sabastan Moore</span>
+        </div>
+      </div>
+    </diV>
+    <div class="search-bar">
+      <ion-searchbar class="input" placeholder="Search...."></ion-searchbar>
+      <div class="icon-div">
+        <img src="../../../../assets/images/Path.png" />
+      </div>
+    </div>
+    <div class="home-category-slider-outer">
+      <span>What Do You Need?</span>
+      <div class="category-slider-outer">
+        <swiper pager="true" [slidesPerView]="4" class="swiper-outer">
+          <ng-template
+            swiperSlide
+            class="swiper-inner"
+            *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+          >
+            <div class="item-box-outer">
+              <div class="item-box-inner">
+                <div class="image-outer">
+                  <img src="../../../../assets/images/Icon.png" />
+                </div>
+              </div>
+              <div class="text-outer">
+                <ion-text class="text-inner poppins medium">
+                  Meetings
+                </ion-text>
+              </div>
+            </div>
+          </ng-template>
+        </swiper>
+      </div>
+    </div>
+    <div class="lesson-title">
+      <span class="poppins">Continue Your Lessons</span>
+    </div>
+    <div class="lessons">
+      <div class="lessons-inner">
+        <div class="circle">
+          <div class="circle-inner">86%</div>
+        </div>
+        <div class="details">
+          <div class="number poppins">17/28</div>
+          <div class="name poppins">3D illustration</div>
+          <div class="instructor">
+            <span class="poppins"> Instructor: </span>
+            <span class="inner-name poppins"> Miles Tone </span>
+          </div>
+          <ion-button class="button poppins">Continue</ion-button>
+        </div>
+      </div>
+    </div>
+    <div class="course">
+      <span class="title poppins">Recommendation Course</span>
+      <span class="see poppins">SEE All</span>
+    </div>
+    <div class="course-slider-outer">
+      <div class="course-slider-outer">
+        <swiper pager="true" [slidesPerView]="1.5" class="swiper-outer">
+          <ng-template
+            swiperSlide
+            class="swiper-inner"
+            *ngFor="let item of [1, 2, 3, 4]"
+          >
+            <div class="item-box-outer">
+              <div class="image-outer"></div>
+
+              <div class="text-outer">
+                <span class="title poppins">Baisc UI/UX Design</span>
+                <div class="profile poppins">
+                  <img src="../../../../assets/images/Image.png" />
+                  <span class="poppins">Gllas Peature</span>
+                </div>
+                <div class="icons poppins">
+                  <div class="time poppins">
+                    <ion-icon name="time"></ion-icon> 1hr 30min
+                  </div>
+                  <div class="member poppins">
+                    <ion-icon name="person"></ion-icon>24 memebers
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </swiper>
+      </div>
+    </div>
+  </div>
+</ion-content>

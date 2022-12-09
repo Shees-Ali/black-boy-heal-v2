@@ -1,0 +1,372 @@
+.therapist-home {
+  background: #000;
+  height: 100vh;
+  overflow: scroll;
+  width: 375px;
+  overflow: scroll;
+  color: black !important;
+  .header {
+    margin-top: 20px;
+    .user {
+      // border: 1px solid red;
+      width: 355px;
+      height: 64px;
+      margin-left: 15px;
+      // margin: auto;
+      display: flex;
+      // justify-content: space-between;
+      align-items: center;
+      overflow-y: hidden;
+      .img {
+        // border: 1px solid red;
+        height: 64px;
+      }
+      .name-main {
+        // border: 1px solid red;
+        height: 64px;
+        // text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        float: left;
+        margin-left: 4px;
+        // overflow-y: hidden;
+        .greets {
+          font-size: 16px;
+          font-weight: 400;
+          color: #707070;
+        }
+        .name {
+          font-size: 18px;
+          font-weight: 400;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  .search-bar {
+    // border: 1px solid red;
+    width: 345px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 16px;
+    ion-searchbar {
+      margin-left: -8px;
+
+      --icon-color: #8b8d8c;
+      ::ng-deep {
+        .searchbar-input-container {
+          .searchbar-input {
+            font-size: 12px;
+            font-weight: bold;
+            outline: none;
+            border-radius: 12px;
+            background-color: #293132;
+            color: #8b8d8c;
+            width: 283px;
+            height: 48px;
+            text-align: left;
+
+            //any style that you want to implement on your searchbar
+          }
+        }
+      }
+    }
+    .icon-div {
+      height: 48px;
+      width: 48px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #293132;
+    }
+  }
+  .home-category-slider-outer {
+    // height: 131px;
+    width: 375px;
+    // border: 1px solid red;
+    color: #ffffff;
+    margin: 15px auto;
+    text-align: left;
+    span {
+      margin-left: 13px;
+      font-size: 16px;
+      font-weight: 500;
+      // border: 1px solid red;
+    }
+    .category-slider-outer {
+      // width: 100%;
+      // height: 100%;
+      // width: 86px;
+      // height: 90px;
+      width: 365px;
+      margin: auto;
+      // margin-left: 10px;
+      // border: 1px solid red;
+    }
+    .item-box-outer {
+      width: 86px;
+      height: 90px;
+      border-radius: 12px;
+      background: #293132;
+      // border: 1px solid red;
+      margin-top: 10px;
+      margin-left: 8px;
+      // float: left;
+    }
+
+    .item-box-inner.active {
+      background: #063b00 !important;
+      filter: drop-shadow(0px 15px 10px lightgray);
+      .text-outer {
+        ion-text.text-inner {
+          color: #ffffff;
+        }
+      }
+    }
+    .item-box-inner {
+      width: 40px;
+      height: 40px;
+      margin: 10px auto;
+      // background: #1e2324;
+      color: #ffffff;
+      // display: flex;
+      // flex-direction: column;
+      // text-align: center;
+      .image-outer {
+        width: 40px;
+        height: 40px;
+        // background: #1e2324;
+        // margin: 8px auto;
+      }
+    }
+    .text-outer {
+      height: 22px;
+      width: 70px;
+      margin: 0 auto;
+      overflow: hidden;
+      // background: yellow;
+      position: relative;
+      ion-text.text-inner {
+        font-size: 12px;
+        font-weight: 400;
+        color: #ffffff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        //   background: pink;
+      }
+    }
+  }
+  .lesson-title {
+    // border: 1px solid red;
+    width: 345px;
+    margin: auto;
+    margin-left: 15px;
+    color: #ffffff;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .lessons {
+    height: 154px;
+    width: 328px;
+    // border: 1px solid red;
+    // margin: auto;
+
+    color: #ffffff;
+    background: #293132;
+    text-align: left;
+    border-radius: 12px;
+    margin-left: 15px;
+    .lessons-inner {
+      // border: 1px solid red;
+      width: 328px;
+      height: 154px;
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      .circle {
+        width: 126px;
+        height: 126px;
+        .circle-inner {
+          border: 6px solid white;
+          border-radius: 50%;
+          height: 126px;
+          width: 126px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .details {
+        // border: 1px solid red;
+        width: 163px;
+        height: 126px;
+        text-align: left;
+        .number {
+          height: 34px;
+          width: 56px;
+          border-radius: 8px;
+          background: #2f2d2d;
+          font-size: 12px;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 1px;
+        }
+        .name {
+          font-size: 14px;
+          font-weight: 400;
+          margin-top: 3px;
+        }
+        .instructor {
+          span {
+            font-size: 12px;
+            font-weight: 500;
+            margin-top: 3px;
+          }
+          .inner-name {
+            font-size: 12px;
+            font-weight: 500;
+            margin-top: 3px;
+          }
+        }
+        .button {
+          width: 160px;
+          height: 38px;
+          font-size: 16px;
+          font-weight: bold;
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+  .course {
+    // height: 154px;
+    width: 345px;
+    // border: 1px solid red;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    .title {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .see {
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+  .course-slider-outer {
+    width: 375px;
+    // border: 1px solid red;
+    color: #ffffff;
+    margin: 15px auto;
+    text-align: left;
+    span {
+      margin-left: 13px;
+      font-size: 16px;
+      font-weight: 500;
+      // border: 1px solid red;
+    }
+    .course-slider-outer {
+      width: 375px;
+      margin: auto;
+    }
+    .item-box-outer {
+      width: 231px;
+      height: 264px;
+      // border: 1px solid red;
+      // margin-left: 60px;
+      border-radius: 12px;
+      // background: white;
+      background: #293132;
+      .image-outer {
+        width: 231px;
+        height: 160px;
+        background: #546261;
+        // border-radius: 12px 0 0 12px;
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
+      }
+
+      .text-outer {
+        text-align: left;
+        width: 209px;
+        height: 79px;
+        margin: 6px auto;
+        text-align: left;
+
+        .title {
+          color: #ffffff;
+          font-size: 14px;
+          font-weight: 500;
+          // border: 1px solid red;
+          margin-left: -1px;
+        }
+        .profile {
+          // border: 1px solid red;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin-top: 4px;
+          width: 125px;
+
+          img {
+            width: 28px;
+            height: 28px;
+            // border: 1px solid red;
+            border-radius: 50%;
+          }
+          span {
+            font-size: 12px;
+            font-weight: bold;
+          }
+        }
+        .icons {
+          // border: 1px solid red;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          // width: 90%;
+          margin-top: 6px;
+
+          .time {
+            font-size: 12px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // border: 1px solid red;
+            width: 40%;
+            color: #8b8d8c;
+          }
+          .member {
+            font-size: 12px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // border: 1px solid red;
+            width: 50%;
+            color: #8b8d8c;
+          }
+        }
+      }
+    }
+  }
+}

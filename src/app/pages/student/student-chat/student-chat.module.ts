@@ -17,9 +17,6 @@ import { StudentChatPage } from './student-chat.page';
     FormsModule,
     IonicModule,
     StudentChatPageRoutingModule,
-    MessagesRoomModule,
-    MessagePersonModule,
-    ChatBoxModule,
   ],
   declarations: [StudentChatPage],
 })
