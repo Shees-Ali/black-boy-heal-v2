@@ -1,3 +1,4 @@
+import { ChatBoxModule } from './chat-box/chat-box.module';
 import { MessagePersonModule } from './message-person/message-person.module';
 import { MessagesRoomModule } from './messages-room/messages-room.module';
 import { NgModule } from '@angular/core';
@@ -18,6 +19,7 @@ import { StudentChatPage } from './student-chat.page';
     StudentChatPageRoutingModule,
     MessagesRoomModule,
     MessagePersonModule,
+    ChatBoxModule,
   ],
   declarations: [StudentChatPage],
 })

@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { MessagePersonModule } from '../message-person/message-person.module';
 import { SwiperModule } from 'swiper/angular';
 import { IonicModule } from '@ionic/angular';
@@ -7,7 +8,13 @@ import { MessagesRoomComponent } from './messages-room.component';
 
 @NgModule({
   declarations: [MessagesRoomComponent],
-  imports: [CommonModule, IonicModule, SwiperModule, MessagePersonModule],
+  imports: [
+    CommonModule,
+    IonicModule,
+    SwiperModule,
+    MessagePersonModule,
+    RouterModule,
+  ],
   exports: [MessagesRoomComponent],
 })
 export class MessagesRoomModule {}

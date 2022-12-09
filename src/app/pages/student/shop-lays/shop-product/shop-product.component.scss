@@ -1,0 +1,207 @@
+.product-main {
+  background: #9499a2;
+  height: 100vh;
+  overflow: scroll;
+  color: black !important;
+  // .bg {
+  //   background-image: linear-gradient(
+  //     to right,
+  //     rgba(255, 0, 0, 0),
+  //     rgba(255, 0, 0, 1)
+  //   );
+  .product-img {
+    // border: 1px solid red;
+    background-image: url("../../../../assets/images/Signature-Black-Crayon.png");
+    background-position: center;
+    // border: 1px solid red;
+    background-repeat: no-repeat;
+    margin: auto;
+    color: #fff;
+
+    // background-size: 40%;
+    // background-size: cover;
+    margin-top: -10px;
+    height: 450px;
+    width: 375px;
+    // z-index: 10;
+  }
+  .layer {
+    /* background: linear-gradient(to bottom, rgba(255, 0, 0, 0), #0f0f0f); */
+    /* margin-top: -100px; */
+    /* height: 460px; */
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+    background: linear-gradient(transparent, #0f0f0f);
+
+    .product-name {
+      // height: 212px;
+      // width: 75px;
+      position: relative;
+      top: 0px;
+      left: 30px;
+      width: 212px;
+      font-size: 28px;
+      font-weight: 400;
+      color: #ffffff;
+      text-align: left;
+      // margin-top: 100px;
+      // border: 1px solid red;
+    }
+
+    .product-size {
+      // border: 1px solid red;
+      width: 375px;
+      margin: auto;
+      // background: lightgray;
+      text-align: left;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      span {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: left;
+        margin-left: 27px;
+      }
+      .sizes {
+        display: flex;
+        flex-direction: column;
+        // width: 375px;
+        margin-left: 27px;
+        .title {
+          // width: 100%;
+          font-size: 16px;
+          font-weight: 300;
+        }
+        .size-main {
+          display: flex;
+          // border: 1px solid red;
+          justify-content: space-between;
+          align-items: center;
+          .s,
+          .m,
+          .l,
+          .xl,
+          .xxl {
+            width: 48px;
+            height: 32px;
+            border-radius: 20px;
+            background: #9499a2;
+            box-shadow: -2px 1px 9px 0px rgba(148, 153, 162, 0.75);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: white;
+          }
+        }
+      }
+      .colors {
+        display: flex;
+        flex-direction: column;
+        // margin-left: 27px;
+        span {
+          font-size: 16px;
+          font-weight: 500;
+          margin-left: 27px;
+        }
+        .colors-main {
+          display: flex;
+          // border: 1px solid red;
+          justify-content: space-between;
+          align-items: center;
+          width: 166px;
+          margin-left: 27px;
+          .color1 {
+            background: #ecae14;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+          }
+          .color2 {
+            background: #6633fd;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+          }
+          .color3 {
+            background: #ff6464;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+          }
+          .color4 {
+            background: #a7a7a7;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+          }
+          .color5 {
+            background: #fafafb;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+  .buy {
+    // border: 1px solid red;
+    width: 375px;
+    margin: auto;
+    border-radius: 25px 25px 0px 0px;
+    height: 149px;
+    margin-top: 63px;
+
+    background: #1e1e1e;
+    color: #ffffff;
+    .buy-inner {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      // border: 1px solid red;
+      height: 60px;
+      .price {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .trawly {
+        height: 120px;
+        width: 72px;
+        border-radius: 10px;
+        background: #9499a2;
+        box-shadow: 2px 1px 14px 1px rgba(148, 153, 162, 1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        top: -50px;
+        font-size: 20px;
+        font-weight: 400;
+      }
+      .quantity {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+        color: #a7a7a7;
+        // border: 1px solid red;
+        width: 100px;
+        border-radius: 12px;
+        background: #423e4a;
+        height: 28px;
+        span {
+          color: #ffffff;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+// }

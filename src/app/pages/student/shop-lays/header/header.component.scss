@@ -1,0 +1,28 @@
+.header {
+  width: 375px;
+  margin: 20px auto;
+  // border: 1px solid red;
+  // color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    // border: 1px solid red;
+    width: 100px;
+  }
+  span {
+    font-size: 19px;
+    font-weight: 400;
+  }
+  .search {
+    // border: 1px solid red;
+    width: 71px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

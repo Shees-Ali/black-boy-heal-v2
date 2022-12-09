@@ -1,0 +1,117 @@
+.payment-method {
+  background: #000;
+  height: 100vh;
+  overflow: scroll;
+  color: black !important;
+  .header {
+    margin-top: 20px;
+  }
+  .background {
+    background: #ffffff;
+    width: 350px;
+    height: 466px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .visa {
+      width: 345px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
+      // border: 1px solid red;
+      background-image: url("../../../../assets/images/Mask.png");
+      background-position: center;
+      // border: 1px solid red;
+      background-repeat: no-repeat;
+      margin: auto;
+      position: relative;
+      top: -30px;
+      border-radius: 5px;
+      color: #fff;
+      .visa-inner {
+        // border: 1px solid red;
+        width: 240px;
+        height: 170px;
+        margin: 20px 20px 0px 20px;
+        text-align: left;
+        .number {
+          margin-top: 20px;
+          font-size: 18px;
+          font-weight: bold;
+          text-align: left;
+          // border: 1px solid red;
+        }
+        .time {
+          margin-top: 20px;
+          display: flex;
+          justify-content: space-between;
+          font-size: 9px;
+          font-weight: bold;
+        }
+        .name {
+          margin-top: 20px;
+          display: flex;
+          justify-content: space-between;
+          span {
+            font-size: 18px;
+            font-weight: 400;
+          }
+          .date {
+            // margin-right: 33px;
+          }
+        }
+      }
+    }
+    .inputs {
+      // border: 1px solid red;
+      height: 172px;
+      width: 315px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      top: -40px;
+      input {
+        border: none;
+        border-bottom: 1px solid #d7dde1;
+        width: 313px;
+        height: 38px;
+        margin: 10px;
+        background: #ffffff;
+
+        outline: none;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+  .buttons {
+    width: 345px;
+    margin: auto;
+    margin-top: 70px;
+    .ship-button {
+      width: 315px;
+      height: 50px;
+      margin: auto;
+      // border: 1px solid red;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .button {
+        width: 100%;
+        height: 100%;
+        font-size: 17px;
+        font-weight: 600;
+      }
+    }
+  }
+}

@@ -42,6 +42,13 @@ const routes: Routes = [
             (m) => m.StudentProfilePageModule
           ),
       },
+      {
+        path: 'shop',
+        loadChildren: () =>
+          import('./shop-lays/shop-lays.module').then(
+            (m) => m.ShopLaysPageModule
+          ),
+      },
     ],
   },
 ];
