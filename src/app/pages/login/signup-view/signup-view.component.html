@@ -1,49 +1,55 @@
-<div class="main">
-  <div class="signup-outer">
-    <div class="signup-inner">
-      <h1 class="bebas">SIGN UP</h1>
-      <ion-list class="input-main">
-        <ion-item color="dark" class="input">
-          <ion-input color="light" placeholder="Full Name"></ion-input>
-        </ion-item>
-        <ion-item color="dark" class="input">
-          <ion-input
-            color="light"
-            placeholder="Your E-Mail Address"
-          ></ion-input>
-        </ion-item>
-        <ion-item color="dark" class="input">
-          <ion-input color="light" placeholder="Phone Number"></ion-input>
-        </ion-item>
-        <ion-item color="dark" class="input">
-          <ion-input color="light" placeholder="Password"></ion-input>
-        </ion-item>
-        <ion-item color="dark" class="input">
-          <ion-checkbox color="dark" slot="start"></ion-checkbox>
-          <ion-label class="check-label"
-            >By continuing you accept our Privacy policy</ion-label
-          >
-        </ion-item>
-        <div class="mb-rt">
-          <ion-button class="button" color="primary" expand="block"
-            >SIGN UP</ion-button
-          >
-        </div>
-      </ion-list>
-      <!-- <div class="bebas forgot">FORGOT PASSWORD</div> -->
-    </div>
-
-    <div class="signup-with-main">
-      <span class="poppins"> SIGN IN WITH</span>
-      <div class="logos">
-        <img src="./../../../../assets/images/logosapple.png" />
-        <img src="./../../../../assets/images/facebook-logo.png" />
-        <img src="./../../../../assets/images/google-logo.png" />
+<ion-content class="ion-padding">
+  <div class="main">
+    <div class="signup-outer">
+      <div class="signup-inner">
+        <h1 class="bebas">SIGN UP</h1>
+        <ion-list class="input-main">
+          <ion-item color="dark" class="input-item input">
+            <ion-input color="light" placeholder="Full Name"></ion-input>
+          </ion-item>
+          <ion-item color="dark" class="input-item input">
+            <ion-input
+              color="light"
+              placeholder="Your E-Mail Address"
+            ></ion-input>
+          </ion-item>
+          <ion-item color="dark" class="input-item input">
+            <ion-input color="light" placeholder="Phone Number"></ion-input>
+          </ion-item>
+          <ion-item color="dark" class="input-item input">
+            <ion-input color="light" placeholder="Password"></ion-input>
+          </ion-item>
+          <ion-item class="input input-item" lines="none">
+            <ion-checkbox color="dark" slot="start"></ion-checkbox>
+            <ion-label class="check-label"
+              >By continuing you accept our Privacy policy</ion-label
+            >
+          </ion-item>
+          <div class="mb-rt">
+            <ion-button
+              (click)="signUp()"
+              class="button"
+              color="primary"
+              expand="block"
+              >SIGN UP</ion-button
+            >
+          </div>
+        </ion-list>
+        <!-- <div class="bebas forgot">FORGOT PASSWORD</div> -->
       </div>
-      <div class="go-to-login">
-        <span>Have an Account?</span>
-        <ion-button color="primary">SIGN IN</ion-button>
+
+      <div class="signup-with-main">
+        <span class="poppins"> SIGN IN WITH</span>
+        <div class="logos">
+          <img src="./../../../../assets/images/logosapple.png" />
+          <img src="./../../../../assets/images/facebook-logo.png" />
+          <img src="./../../../../assets/images/google-logo.png" />
+        </div>
+        <div class="go-to-login">
+          <span>Have an Account?</span>
+          <ion-button fill="clear" color="primary">SIGN IN</ion-button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</ion-content>

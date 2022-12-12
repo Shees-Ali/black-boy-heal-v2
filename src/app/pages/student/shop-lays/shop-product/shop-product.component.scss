@@ -11,7 +11,7 @@
   //   );
   .product-img {
     // border: 1px solid red;
-    background-image: url("../../../../assets/images/Signature-Black-Crayon.png");
+    // background-image: url("../../../../assets/images/Signature-Black-Crayon.png");
     background-position: center;
     // border: 1px solid red;
     background-repeat: no-repeat;
@@ -26,9 +26,7 @@
     // z-index: 10;
   }
   .layer {
-    /* background: linear-gradient(to bottom, rgba(255, 0, 0, 0), #0f0f0f); */
-    /* margin-top: -100px; */
-    /* height: 460px; */
+    width: 100%;
     position: absolute;
     bottom: 0;
     z-index: 5;
@@ -40,7 +38,7 @@
       position: relative;
       top: 0px;
       left: 30px;
-      width: 212px;
+      width: 100%;
       font-size: 28px;
       font-weight: 400;
       color: #ffffff;
@@ -51,7 +49,7 @@
 
     .product-size {
       // border: 1px solid red;
-      width: 375px;
+      width: 100%;
       margin: auto;
       // background: lightgray;
       text-align: left;
@@ -149,8 +147,7 @@
     }
   }
   .buy {
-    // border: 1px solid red;
-    width: 375px;
+    width: 100%;
     margin: auto;
     border-radius: 25px 25px 0px 0px;
     height: 149px;

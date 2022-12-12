@@ -1,7 +1,6 @@
 .chat-box-main {
   height: 100vh;
   background: #272a2c;
-  // background: red;
   .header {
     margin-top: 20px;
     display: flex;
@@ -44,9 +43,7 @@
   }
   .chat-box {
     margin: auto;
-    // margin-top: -10px;
-    width: 375px;
-    height: 644px;
+    height: 100%;
     background: #ffffff;
     border-radius: 30px 30px 0 0;
     .time-details {

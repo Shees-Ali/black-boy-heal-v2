@@ -49,6 +49,13 @@ const routes: Routes = [
             (m) => m.ShopLaysPageModule
           ),
       },
+      {
+        path: 'therapist-directory',
+        loadChildren: () =>
+          import('./therapist-directory/therapist-directory.module').then(
+            (m) => m.TherapistDirectoryPageModule
+          ),
+      },
     ],
   },
 ];

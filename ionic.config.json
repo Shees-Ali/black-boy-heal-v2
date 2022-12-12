@@ -1,5 +1,7 @@
 {
   "name": "black-boy-heal",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

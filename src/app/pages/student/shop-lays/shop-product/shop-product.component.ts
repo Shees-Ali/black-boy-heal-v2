@@ -1,24 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injector, OnInit } from '@angular/core';
+import { BasePage } from 'src/app/pages/base/base';
 
 @Component({
   selector: 'app-shop-product',
   templateUrl: './shop-product.component.html',
   styleUrls: ['./shop-product.component.scss'],
 })
-export class ShopProductComponent implements OnInit {
-  // quantity: number = 75;
-
-  constructor() {}
-
+export class ShopProductComponent extends BasePage implements OnInit {
+  constructor(injector: Injector) {
+    super(injector);
+  }
   ngOnInit() {}
 
-  // onDecrement() {
-  //   console.log('ho raha hai');
-  // }
-  // onIncrement() {
-  //   console.log('ho raha hai');
-  // }
   onIncrement() {}
 
   onDecrement() {}
+
+  goToCart() {
+    this.nav.navigateTo('student/shop/shipping-method');
+  }
 }

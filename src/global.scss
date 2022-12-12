@@ -37,3 +37,12 @@
 .header-md::after {
     background-image: none;
 }
+
+.input-item {
+  --border-radius: 10px;
+}
+
+.light-black-green-bg {
+  --background: #293132 !important;
+  background: #293132 !important;
+}

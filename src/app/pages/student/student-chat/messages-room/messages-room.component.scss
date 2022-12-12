@@ -1,11 +1,6 @@
 .message-room-outer {
-  // border: 1px solid red;
-  height: 100vh;
-  background: #272a2c;
-  overflow: scroll;
-  // width: 386px;
+  --background: #272a2c;
   .header {
-    // border: 1px solid green;
     height: 113px;
     width: 375px;
     margin: auto;
@@ -15,7 +10,6 @@
     background: #293132;
     border-radius: 0 0 25px 25px;
     .input {
-      // border: 1px solid red;
       border-radius: 10px;
       display: flex;
       align-items: center;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-welcome-slide',
@@ -6,9 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome-slide.component.scss'],
 })
 export class WelcomeSlideComponent implements OnInit {
-
-  constructor() { }
+  @Output('slideNext') slideNext: EventEmitter<void> = new EventEmitter();
+  constructor() {}
 
   ngOnInit() {}
-
 }

@@ -58,11 +58,9 @@
         }
       }
       .button {
-        // border: 1px solid red;
-        border-radius: 100% !important;
+        --border-radius: 100% !important;
         width: 40px;
         height: 40px;
-        background: #fff017;
         font-size: 18px;
         display: flex;
         align-items: center;

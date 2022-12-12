@@ -1,0 +1,60 @@
+<header
+  [title]="'Therapist Directory'"
+  [showMenu]="true"
+  [showBack]="false"
+></header>
+
+<ion-content>
+  <div class="date-div light-black-green-bg">
+    <div class="month-display">
+      <ion-button color="light" fill="clear">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+      <p class="poppins">August</p>
+      <ion-button color="light" fill="clear">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+    </div>
+    <app-dashboard-date-box [showTodaysDate]="false"></app-dashboard-date-box>
+  </div>
+
+  <div class="home-category-slider-outer">
+    <span class="poppins">Therapist Specialities</span>
+    <div class="category-slider-outer">
+      <swiper pager="true" [slidesPerView]="4" class="swiper-outer">
+        <ng-template
+          swiperSlide
+          class="swiper-inner"
+          *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+        >
+          <div class="item-box-outer">
+            <div class="item-box-inner">
+              <div class="image-outer">
+                <img src="../../../../assets/images/Icon.png" />
+              </div>
+            </div>
+            <div class="text-outer">
+              <ion-text class="text-inner poppins medium"> Meetings </ion-text>
+            </div>
+          </div>
+        </ng-template>
+      </swiper>
+    </div>
+  </div>
+
+  <div class="therapist-listing">
+    <p class="poppins">Therapist</p>
+
+    <div class="rating-sc" *ngFor="let item of [1, 2, 4]">
+      <img src="assets/images/ab46.png" alt="" class="rt-profile" />
+      <div class="rating-content">
+        <div class="rt-box">
+          <h4>Sabastan Moore</h4>
+          <img src="assets/svgs/rating.svg" alt="" />
+        </div>
+        <h6>M.A., LPC</h6>
+        <p>Sabastan Moore is a state certified Therapist servicing...</p>
+      </div>
+    </div>
+  </div>
+</ion-content>

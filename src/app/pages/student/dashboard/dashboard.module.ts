@@ -36,5 +36,8 @@ import { SharedModule } from 'src/app/components/shared.module';
     DashboardFindTherapistBoxComponent,
     DashboardShopBoxComponent,
   ],
+  exports: [
+    DashboardDateBoxComponent
+  ]
 })
 export class DashboardPageModule {}
