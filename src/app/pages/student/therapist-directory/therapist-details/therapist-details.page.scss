@@ -1,0 +1,21 @@
+// .main {
+//   background: #000;
+// }
+.header-content {
+  // border: 1px solid red;
+  width: 100%;
+}
+ion-header {
+  ion-buttons {
+    text-align: center;
+
+    ion-title {
+      font-size: 13px;
+      padding-left: 20px;
+      color: #ffffff;
+    }
+    ion-icon {
+      color: #ffffff;
+    }
+  }
+}

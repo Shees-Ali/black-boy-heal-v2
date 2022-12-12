@@ -4,13 +4,13 @@
       <ion-menu-button *ngIf="showMenu">
         <ion-icon src="assets/svgs/menu-icon.svg"></ion-icon>
       </ion-menu-button>
-      <ion-button  *ngIf="showBack">
+      <ion-button (click)="back()" color="light" *ngIf="showBack">
         <ion-icon name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-title>{{ title }}</ion-title>
-    <ion-buttons slot="end"> 
-      <ion-button *ngIf="showBell">
+    <ion-buttons slot="end">
+      <ion-button color="light" *ngIf="showBell">
         <ion-icon src="assets/svgs/bell-icon.svg"></ion-icon>
       </ion-button>
     </ion-buttons>

@@ -45,7 +45,7 @@
   <div class="therapist-listing">
     <p class="poppins">Therapist</p>
 
-    <div class="rating-sc" *ngFor="let item of [1, 2, 4]">
+    <div (click)="details()" class="rating-sc" *ngFor="let item of [1, 2, 4]">
       <img src="assets/images/ab46.png" alt="" class="rt-profile" />
       <div class="rating-content">
         <div class="rt-box">

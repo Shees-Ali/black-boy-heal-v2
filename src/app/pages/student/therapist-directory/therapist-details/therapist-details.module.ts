@@ -7,14 +7,18 @@ import { IonicModule } from '@ionic/angular';
 import { TherapistDetailsPageRoutingModule } from './therapist-details-routing.module';
 
 import { TherapistDetailsPage } from './therapist-details.page';
+import { SvContentModule } from './sv-content/sv-content.module';
+import { SharedModule } from 'src/app/components/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TherapistDetailsPageRoutingModule
+    TherapistDetailsPageRoutingModule,
+    SvContentModule,
+    SharedModule,
   ],
-  declarations: [TherapistDetailsPage]
+  declarations: [TherapistDetailsPage],
 })
 export class TherapistDetailsPageModule {}

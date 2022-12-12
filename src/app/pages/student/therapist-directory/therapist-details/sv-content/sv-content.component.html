@@ -1,0 +1,99 @@
+<div class="main">
+  <div class="profile-sec">
+    <div class="img">
+      <img src="../../../../assets/svgs/profile.svg" />
+    </div>
+    <div class="text">
+      <div class="info">
+        <div class="name poppins">Sabastan</div>
+        <div class="location poppins">M.A.. LPC</div>
+        <div class="stars">
+          <div class="stars-inner">
+            <ion-icon name="star-outline"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+          </div>
+          <div class="rating poppins">5.0 (453 reviews)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="time-info">
+    <div class="patients">
+      <div class="icon">
+        <img src="../../../../assets/svgs/patients.svg" />
+      </div>
+      <div class="detail">
+        <span class="text poppins">Patients</span>
+        <span class="num">1500+</span>
+      </div>
+    </div>
+    <div class="experience">
+      <div class="icon">
+        <img src="../../../../assets/svgs/experience.svg" />
+      </div>
+      <div class="detail">
+        <span class="text poppins">Patients</span>
+        <span class="num">1500+</span>
+      </div>
+    </div>
+
+    <div class="rating">
+      <div class="icon">
+        <img src="../../../../assets/svgs/rating-icon.svg" />
+      </div>
+      <div class="detail">
+        <span class="text poppins">Patients</span>
+        <span class="num">1500+</span>
+      </div>
+    </div>
+  </div>
+  <div class="about">
+    <span class="title poppins">About Doctor</span>
+    <div class="about-text poppins">
+      eius soluta, saepe reprehenderit inventore asperiores rspiciatis
+      voluptatibus nulla reiciendis aspernatur at, error reprehenderit corporis
+      in nobis quasi praesentium? Aliquid laudantium molestias exercitationem
+      sequi dignissimos minima officiis vel dolore. Accusamus beatae unde
+      veritatis, autem non quam sed, consectetur tenetur libero saepe harum,
+      perferendis corporis repellat qui magnam cupiditate eum minima! Dolor odio
+      a reiciendis, beatae ullam debitis ab doloremque, alias accusantium
+      provident, quisquam officia.
+    </div>
+  </div>
+  <div class="schedual">
+    <span class="title poppins">Scheduale</span>
+    <div class="home-category-slider-outer">
+      <div class="category-slider-outer">
+        <swiper
+          [config]="swiperConfig"
+          pager="true"
+          [slidesPerView]="5"
+          class="swiper-outer"
+        >
+          <ng-template
+            swiperSlide
+            class="swiper-inner"
+            *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+          >
+            <div class="item-box-outer">
+              <div class="item-box-inner">
+                <div class="item">
+                  <span class="day">Mon</span>
+                  <span class="num">20</span>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </swiper>
+      </div>
+    </div>
+  </div>
+  <div class="button">
+    <ion-button (click)="bookAppointment()" shape="round"
+      >BOOK APPOINMENT</ion-button
+    >
+  </div>
+</div>
