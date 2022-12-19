@@ -7,8 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { TaskManagerPageRoutingModule } from './task-manager-routing.module';
 
 import { TaskManagerPage } from './task-manager.page';
-import { MyTaskComponent } from './my-task/my-task.component';
-import { TaskBoxComponent } from './task-box/task-box.component';
+
 
 @NgModule({
   imports: [
@@ -17,6 +16,6 @@ import { TaskBoxComponent } from './task-box/task-box.component';
     IonicModule,
     TaskManagerPageRoutingModule,
   ],
-  declarations: [TaskManagerPage, TaskBoxComponent, MyTaskComponent],
+  declarations: [TaskManagerPage],
 })
 export class TaskManagerPageModule {}

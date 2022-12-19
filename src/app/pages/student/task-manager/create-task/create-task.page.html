@@ -1,0 +1,27 @@
+<header [title]="'CREATE A NEW TASK'"></header>
+
+<ion-content class="ion-padding">
+  <ion-segment
+    color="primary"
+    [(ngModel)]="type"
+    (ionChange)="segmentChanged($event)"
+    scrollable
+  >
+    <ion-segment-button value="deposit" checked>
+      <ion-label>OVERVIEW</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="loan">
+      <ion-label>ACTIVITY</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div class="segment" [ngSwitch]="type">
+    <div *ngSwitchCase="'deposit'">
+      <app-task-overview></app-task-overview>
+    </div>
+
+    <div *ngSwitchCase="'loan'">
+      <app-task-activity></app-task-activity>
+    </div>
+  </div>
+</ion-content>
