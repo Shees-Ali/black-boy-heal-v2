@@ -1,19 +1,30 @@
-import { Component, Injector, OnInit } from '@angular/core';
+import { Component, Injector, OnInit, Output, EventEmitter } from '@angular/core';
 import { BasePage } from '../../base/base';
+import { graphql } from 'src/app/services/graphql';
 
 @Component({
   selector: 'app-login-view',
   templateUrl: './login-view.component.html',
   styleUrls: ['./login-view.component.scss'],
 })
+
 export class LoginViewComponent extends BasePage implements OnInit {
-  constructor(injector: Injector) {
+  constructor(injector: Injector,private ql: graphql) {
     super(injector);
   }
+  email:string = ""
+  password:string =""
 
-  ngOnInit() {}
+  @Output() signUpEvent = new EventEmitter<string>();
 
-  signIn() {
-    this.nav.navigateTo('splash');
+  ngOnInit() {
+  }
+
+  async signIn() {
+    const lU = await this.ql.loginUser(this.email,this.password);
+  }
+
+  signUp() {
+    this.signUpEvent.emit();
   }
 }

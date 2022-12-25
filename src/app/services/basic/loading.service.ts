@@ -19,6 +19,8 @@ export class LoadingService {
   async hideLoader() {
     if (this.loading) {
       this.loading.dismiss();
+    } else {
+      console.log(this.loading)
     }
   }
 }

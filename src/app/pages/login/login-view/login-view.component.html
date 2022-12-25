@@ -5,10 +5,10 @@
         <h1 class="bebas">SIGN IN</h1>
         <ion-list class="input-main">
           <ion-item color="dark" class="input-item input">
-            <ion-input color="light" placeholder="Phone / Email"></ion-input>
+            <ion-input color="light" [(ngModel)]="email" type="email" placeholder="Email"></ion-input>
           </ion-item>
           <ion-item color="dark" class="input-item input">
-            <ion-input color="light" placeholder="Password"></ion-input>
+            <ion-input color="light" type="password" [(ngModel)]="password"  placeholder="Password"></ion-input>
           </ion-item>
           <div class="mb-rt">
             <ion-button
@@ -30,9 +30,9 @@
           <img src="./../../../../assets/images/facebook-logo.png" />
           <img src="./../../../../assets/images/google-logo.png" />
         </div>
-        <div class="go-to-signup">
+        <div class="go-to-signup" (click)="signUp()">
           <span>Don't have an account?</span>
-          <ion-button fill="clear" color="primary">SIGN IN</ion-button>
+          <ion-button fill="clear" color="primary">SIGN UP</ion-button>
         </div>
       </div>
     </div>

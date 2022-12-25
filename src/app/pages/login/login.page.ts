@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { SwiperComponent } from 'swiper/angular';
+import { Apollo, gql } from 'apollo-angular'
 
 @Component({
   selector: 'app-login',
@@ -23,5 +24,9 @@ export class LoginPage implements OnInit {
 
   gotoLogin() {
     this.swiper?.swiperRef.slideTo(0);
+  }
+
+  signUp() {
+
   }
 }
