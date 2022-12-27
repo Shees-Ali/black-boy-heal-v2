@@ -22,7 +22,7 @@ import { InMemoryCache } from '@apollo/client/core'
       return {
         cache: new InMemoryCache(),
         link: httpLink.create({
-          uri: 'http://24.199.72.226:4000/graphql'
+          uri: 'http://localhost:4000/graphql'
         })
       }
     },
@@ -31,3 +31,4 @@ import { InMemoryCache } from '@apollo/client/core'
   bootstrap: [AppComponent],
 })
 export class AppModule { }
+// uri: 'http://24.199.72.226:4000/graphql'
