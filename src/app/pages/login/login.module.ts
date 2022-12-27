@@ -11,7 +11,7 @@ import { SwiperModule } from 'swiper/angular';
 import { LoginViewComponent } from './login-view/login-view.component';
 import { SignupViewComponent } from './signup-view/signup-view.component';
 import { PhoneVerificationViewComponent } from './phone-verification-view/phone-verification-view.component';
-
+import { NgOtpInputModule } from 'ng-otp-input';
 @NgModule({
   imports: [
     CommonModule,
@@ -19,6 +19,7 @@ import { PhoneVerificationViewComponent } from './phone-verification-view/phone-
     IonicModule,
     LoginPageRoutingModule,
     SwiperModule,
+    NgOtpInputModule
   ],
   declarations: [
     LoginPage,

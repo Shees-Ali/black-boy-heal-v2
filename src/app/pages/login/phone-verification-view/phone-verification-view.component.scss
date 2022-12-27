@@ -1,5 +1,6 @@
 .screen {
   height: 100%;
+  text-align: center;
   width: 100%;
 }
 
@@ -20,18 +21,25 @@
 .box {
   display: flex;
   justify-content: center;
+  border-color: none;
   align-items: center;
   margin-top: 10% !important;
   justify-content: space-evenly;
 
-  .box1 {
-    height: 64px;
-    width: 65px;
-    border-radius: 8px;
-    background-color: white;
-    text-align: center;
-    padding-top: 20px;
-  }
+  // .box1 {
+  //   height: 64px;
+  //   width: 192px;
+  //   border-radius: 8px;
+  //   border-color: none;
+  //   background-color: #1E2324;
+  //   text-align: center;
+  //   border: #1E2324;
+  //   padding-bottom: 20px;
+  //   padding-top: 20px;  
+
+  // }
+
+  
 }
 
 .text {

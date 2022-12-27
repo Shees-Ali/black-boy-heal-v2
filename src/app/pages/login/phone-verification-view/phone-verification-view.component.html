@@ -5,19 +5,18 @@
       <br />
       <span>we sent a code to number</span><br />
       <span>(555)-555 5555</span><br />
-      <span class="change" (click)="change()">change</span>
+      <span class="change">change</span>
     </div>
 
     <div class="box">
-      <div class="box1">1</div>
-      <div class="box1">2</div>
-      <div class="box1">3</div>
-      <div class="box1">4</div>
+      <ng-otp-input class="box1" [config]="config"></ng-otp-input>
     </div>
+      
     <div class="text">
-      <span>Didn't receive your code?</span><span class="resend" (click)="Resend()">Resend</span
+      <span>Didn't receive your code?</span><span class="resend">Resend</span
       ><br />
-      <!-- <p class="skip">SKIP</p> -->
+      <p class="skip">SKIP</p>
     </div>
   </div>
 </ion-content>
+  

@@ -5,11 +5,11 @@
   background: var(--ion-color-dark);
   display: flex;
   flex-direction: column;
-  //   justify-content: space-between;
-  overflow: hidden;
+    justify-content: space-between;
+  // overflow: scroll;
   .main-image-section {
-    // height: calc(100% - 326px);
-    background: var(--ion-color-dark);
+    height: calc(100% - 326px);
+    background: #1e2324;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,12 +31,11 @@
     margin-top: -24px;
     // justify-content: center;
     // align-items: center;
-    .outer-heading {
-      //   height: 215px;
-    }
+    
     .heading-box {
       color: #ffffff;
       display: flex;
+      overflow: scroll;
       flex-direction: column;
       justify-content: flex-end;
       align-items: center;
@@ -50,6 +49,7 @@
       }
       .subheading {
         font-size: 16px;
+        height: 25vh;
         // line-height: 24px;
         // letter-spacing: 2px;
         // text-transform: capitalize;
@@ -62,9 +62,13 @@
         .content-options {
           display: flex;
           flex-direction: column;
+          font-family: "Poppins";
+          overflow: scroll;
+          font-size: 16px;
           justify-content: flex-start;
           margin-top: 10px;
           margin-bottom: 10px;
+          
 
           // text-transform: capitalize;
           .cn-opt {
@@ -103,7 +107,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       .i2464 {
         background: rgba(0, 0, 0, 0.28);
       }
@@ -147,3 +151,5 @@
     }
   }
 }
+
+
