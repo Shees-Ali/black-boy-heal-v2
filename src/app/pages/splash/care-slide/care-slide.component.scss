@@ -56,3 +56,9 @@
     }
   }
 }
+@media only screen and (max-width: 336px) {
+  .subheading {
+    height: 13vh;
+    overflow: scroll;
+  }
+}
