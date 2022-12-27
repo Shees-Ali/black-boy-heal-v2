@@ -1,6 +1,5 @@
 import { Component, Injector, OnInit, Output, EventEmitter } from '@angular/core';
 import { BasePage } from '../../base/base';
-import { graphql } from 'src/app/services/graphql';
 
 @Component({
   selector: 'app-login-view',
@@ -9,19 +8,31 @@ import { graphql } from 'src/app/services/graphql';
 })
 
 export class LoginViewComponent extends BasePage implements OnInit {
-  constructor(injector: Injector,private ql: graphql) {
+  constructor(injector: Injector) {
     super(injector);
   }
-  email:string = ""
-  password:string =""
+  email: string = ""
+  password: string = ""
 
   @Output() signUpEvent = new EventEmitter<string>();
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   async signIn() {
-    const lU = await this.ql.loginUser(this.email,this.password);
+    const lU: any = await this.graphql.loginUser(this.email, this.password);
+    if (lU?.signIn.fullName) {
+      const data = JSON.stringify(lU.signIn);
+      this.storageService.set("currentUser", data);
+      this.storageService.set("token", lU.signIn.token);
+      this.storageService.set("type", lU.signIn.role);
+      if (lU.signIn.role === "student") {
+        this.nav.navigateTo('student');
+      } else if (lU.signIn.role === "therapist") {
+        this.nav.navigateTo('therapist');
+      }
+      this.nav.navigateTo('therapist');
+
+    }
   }
 
   signUp() {

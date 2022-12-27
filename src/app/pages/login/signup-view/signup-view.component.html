@@ -5,22 +5,23 @@
         <h1 class="bebas">SIGN UP</h1>
         <ion-list class="input-main">
           <ion-item color="dark" class="input-item input">
-            <ion-input color="light" placeholder="Full Name"></ion-input>
+            <ion-input color="light" placeholder="Full Name" [(ngModel)]="fullName" type="text"></ion-input>
           </ion-item>
           <ion-item color="dark" class="input-item input">
             <ion-input
               color="light"
               placeholder="Your E-Mail Address"
+              [(ngModel)]="email" type="email"
             ></ion-input>
           </ion-item>
           <ion-item color="dark" class="input-item input">
-            <ion-input color="light" placeholder="Phone Number"></ion-input>
+            <ion-input color="light" placeholder="Phone Number" [(ngModel)]="phoneNumber" type="number"></ion-input>
           </ion-item>
           <ion-item color="dark" class="input-item input">
-            <ion-input color="light" placeholder="Password"></ion-input>
+            <ion-input color="light" placeholder="Password" [(ngModel)]="password" type="password"></ion-input>
           </ion-item>
           <ion-item class="input input-item" lines="none">
-            <ion-checkbox color="dark" slot="start"></ion-checkbox>
+            <ion-checkbox  [(ngModel)]="condition"  color="dark" slot="start"></ion-checkbox>
             <ion-label class="check-label"
               >By continuing you accept our Privacy policy</ion-label
             >
@@ -39,13 +40,13 @@
       </div>
 
       <div class="signup-with-main">
-        <span class="poppins"> SIGN IN WITH</span>
+        <span class="poppins"> SIGN UP WITH</span>
         <div class="logos">
           <img src="./../../../../assets/images/logosapple.png" />
           <img src="./../../../../assets/images/facebook-logo.png" />
           <img src="./../../../../assets/images/google-logo.png" />
         </div>
-        <div class="go-to-login">
+        <div class="go-to-login" (click)="signIn()">
           <span>Have an Account?</span>
           <ion-button fill="clear" color="primary">SIGN IN</ion-button>
         </div>

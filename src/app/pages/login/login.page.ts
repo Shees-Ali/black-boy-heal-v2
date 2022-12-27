@@ -1,32 +1,63 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { SwiperComponent } from 'swiper/angular';
-import { Apollo, gql } from 'apollo-angular'
+import { Component, OnInit, ViewChild ,Injector} from '@angular/core';
+import { BasePage } from '../base/base';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit {
-  @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
+export class LoginPage extends BasePage implements OnInit {
+  constructor(injector: Injector) { 
+    super(injector);
+   }
+  currentUser: any
+  signIn: boolean = true
+  signUp: boolean = false
+  phoneVerification: boolean = false
+  params:any = this.nav.getQueryParams()
+  role:string = this.params.type;
 
-  constructor() {}
-
-  ngOnInit() {}
-
-  gotoPV() {
-    this.swiper?.swiperRef.slideTo(2);
+  async ngOnInit() {
+    console.log(this.role);
+    this.currentUser = JSON.parse(await this.storageService.get("currentUser"));
+    if(this.currentUser.role === "student"){
+      this.nav.navigateTo('student');
+    } else if(this.currentUser.role === "therapist"){
+      this.nav.navigateTo('therapist');
+    }
   }
 
-  gotoSignup() {
-    this.swiper?.swiperRef.slideTo(1);
+  signUP(){
+    this.signIn = false;
+    this.phoneVerification = false;
+    this.signUp = true;
   }
 
-  gotoLogin() {
-    this.swiper?.swiperRef.slideTo(0);
+  signIN(){
+    this.signUp = false;
+    this.phoneVerification = false;
+    this.signIn = true;
   }
 
-  signUp() {
-
+  changeNumber(){
+    this.signIn = false;
+    this.phoneVerification = false;
+    this.signUp = true;
   }
+
+  verified(){
+    if(this.currentUser.role === "student"){
+      this.nav.navigateTo('student');
+    } else if(this.currentUser.role === "therapist"){
+      this.nav.navigateTo('therapist');
+    }
+    // this.nav.navigateTo('splash');
+  }
+
+  verify(){
+    this.signIn = false;
+    this.signUp = false;
+    this.phoneVerification = true;
+  }
+
 }

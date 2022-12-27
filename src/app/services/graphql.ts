@@ -27,21 +27,38 @@ export class graphql {
       _id
       fullName
       role
+      phoneNumber
     }
   }
 `
 
   signUpgql = gql`
-query getUsers($limit: Int!){
-    getUser(limit: $limit){
-      user{ 
+  mutation
+    signUp(
+      $email: String!,
+      $password: String!,
+      $role: String!,
+      $fullName: String!,
+      $phoneNumber: String!,
+      $Address: String,
+      ){
+      signUp(
+        data: {
+          email: $email,
+          password: $password,
+          role: $role,
+          fullName: $fullName,
+          phoneNumber: $phoneNumber,
+          Address: $Address,
+        }
+      ) {
         _id
+        token
+        role
         fullName
-        role           
+        phoneNumber
       }
-      totalItem
     }
-  }
 `
 
   getUsers() {
@@ -56,16 +73,16 @@ query getUsers($limit: Int!){
             },
             errorPolicy: 'all'
           })
-          .valueChanges.subscribe((result: any) => {
+          .valueChanges.subscribe(({ data }) => {
             this.util.hideLoader();
-            if (result.error) {
-              this.util.presentFailureToast(result.error, "");
-            }
-            if (result.errors) {
-              this.util.presentFailureToast(result.error, "");
-            }
-            resolve(result.data);
-          });
+            console.log('got data', data)
+            resolve(data);
+          },
+            error => {
+              this.util.hideLoader();
+              console.log('there was an error sending the query', error)
+              this.util.presentFailureToast(error, "");
+            });
       } catch (error) {
         this.util.hideLoader();
         this.util.presentFailureToast(error, "");
@@ -87,17 +104,16 @@ query getUsers($limit: Int!){
             },
             errorPolicy: 'all'
           })
-          .valueChanges.subscribe((result: any) => {
-            console.log("res", result)
+          .valueChanges.subscribe(({ data }) => {
             this.util.hideLoader();
-            if (result.error) {
-              this.util.presentFailureToast(result.error, "");
-            }
-            if (result.errors) {
-              this.util.presentFailureToast(result.error, "");
-            }
-            resolve(result.data);
-          });
+            console.log('got data', data)
+            resolve(data);
+          },
+            error => {
+              this.util.hideLoader();
+              console.log('there was an error sending the query', error)
+              this.util.presentFailureToast(error, "");
+            });
       } catch (error) {
         console.log("er", error)
         this.util.hideLoader();
@@ -107,28 +123,36 @@ query getUsers($limit: Int!){
     });
   }
 
-  signUp() {
+  signUp(fullName: string,
+    email: string,
+    phoneNumber: string,
+    password: string,) {
     return new Promise((resolve, reject) => {
       this.util.showLoader();
       try {
         this.apollo
-          .watchQuery({
-            query: this.getUsersgql,
+          .mutate({
+            mutation: this.signUpgql,
             variables: {
-              limit: 1
+              fullName: fullName,
+              email: email,
+              phoneNumber: phoneNumber,
+              password: password,
             },
             errorPolicy: 'all'
           })
-          .valueChanges.subscribe((result: any) => {
-            this.util.hideLoader();
-            if (result.error) {
-              this.util.presentFailureToast(result.error, "");
+          .subscribe(
+            ({ data }) => {
+              this.util.hideLoader();
+              console.log('got data', data)
+              resolve(data);
+            },
+            error => {
+              this.util.hideLoader();
+              console.log('there was an error sending the query', error)
+              this.util.presentFailureToast(error, "");
             }
-            if (result.errors) {
-              this.util.presentFailureToast(result.error, "");
-            }
-            resolve(result.data);
-          });
+          );
       } catch (error) {
         this.util.hideLoader();
         this.util.presentFailureToast(error, "");
