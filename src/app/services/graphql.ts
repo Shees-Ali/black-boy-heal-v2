@@ -1,65 +1,66 @@
-import { Apollo, gql } from 'apollo-angular'
+import { Apollo, gql } from 'apollo-angular';
 import { Injectable } from '@angular/core';
-import { UtilityService } from './utility.service'
+import { UtilityService } from './utility.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class graphql {
-  constructor(private apollo: Apollo, private util: UtilityService) { }
+  constructor(private apollo: Apollo, private util: UtilityService) {}
 
   getUsersgql = gql`
-    query getUsers($limit: Int!){
-        getUser(limit: $limit){
-          user{ 
-            _id
-            fullName           
-          }
-          totalItem
+    query getUsers($limit: Int!) {
+      getUser(limit: $limit) {
+        user {
+          _id
+          fullName
         }
+        totalItem
       }
-  `
+    }
+  `;
 
   loginUsergql = gql`
-  query signIn($email: String!, $password: String!){
-    signIn(data:{email:$email,password: $password}){
-      token
-      _id
-      fullName
-      role
-      phoneNumber
-    }
-  }
-`
-
-  signUpgql = gql`
-  mutation
-    signUp(
-      $email: String!,
-      $password: String!,
-      $role: String!,
-      $fullName: String!,
-      $phoneNumber: String!,
-      $Address: String,
-      ){
-      signUp(
-        data: {
-          email: $email,
-          password: $password,
-          role: $role,
-          fullName: $fullName,
-          phoneNumber: $phoneNumber,
-          Address: $Address,
-        }
-      ) {
-        _id
+    query signIn($email: String!, $password: String!) {
+      signIn(data: { email: $email, password: $password }) {
         token
-        role
+        _id
         fullName
+        role
         phoneNumber
       }
     }
-`
+  `;
+
+  signUpgql = gql`
+    mutation signUp(
+      $email: String!
+      $password: String!
+      $role: String!
+      $fullName: String!
+      $phoneNumber: String!
+      $Address: String
+    ) {
+      signUp(
+        data: {
+          email: $email
+          password: $password
+          role: $role
+          fullName: $fullName
+          phoneNumber: $phoneNumber
+          Address: $Address
+        }
+      ) {
+        user {
+          _id
+          fullName
+          email
+        }
+        code
+        token
+      }
+    }
+  `;
 
   getUsers() {
     return new Promise((resolve, reject) => {
@@ -69,23 +70,25 @@ export class graphql {
           .watchQuery({
             query: this.getUsersgql,
             variables: {
-              limit: 1
+              limit: 1,
             },
-            errorPolicy: 'all'
+            errorPolicy: 'all',
           })
-          .valueChanges.subscribe(({ data }) => {
-            this.util.hideLoader();
-            console.log('got data', data)
-            resolve(data);
-          },
-            error => {
+          .valueChanges.subscribe(
+            ({ data }) => {
               this.util.hideLoader();
-              console.log('there was an error sending the query', error)
-              this.util.presentFailureToast(error, "");
-            });
+              console.log('got data', data);
+              resolve(data);
+            },
+            (error) => {
+              this.util.hideLoader();
+              console.log('there was an error sending the query', error);
+              this.util.presentFailureToast(error, '');
+            }
+          );
       } catch (error) {
         this.util.hideLoader();
-        this.util.presentFailureToast(error, "");
+        this.util.presentFailureToast(error, '');
         reject(error);
       }
     });
@@ -100,33 +103,39 @@ export class graphql {
             query: this.loginUsergql,
             variables: {
               email: email,
-              password: password
+              password: password,
             },
-            errorPolicy: 'all'
+            errorPolicy: 'all',
           })
-          .valueChanges.subscribe(({ data }) => {
-            this.util.hideLoader();
-            console.log('got data', data)
-            resolve(data);
-          },
-            error => {
+          .valueChanges.subscribe(
+            ({ data }) => {
               this.util.hideLoader();
-              console.log('there was an error sending the query', error)
-              this.util.presentFailureToast(error, "");
-            });
+              console.log('got data', data);
+              resolve(data);
+            },
+            (error) => {
+              this.util.hideLoader();
+              console.log('there was an error sending the query', error);
+              this.util.presentFailureToast(error, '');
+            }
+          );
       } catch (error) {
-        console.log("er", error)
+        console.log('er', error);
         this.util.hideLoader();
-        this.util.presentFailureToast(error, "");
+        this.util.presentFailureToast(error, '');
         reject(error);
       }
     });
   }
 
-  signUp(fullName: string,
+  signUp(
     email: string,
+    password: string,
     phoneNumber: string,
-    password: string,) {
+    fullName: string,
+    role: string,
+    Address: string
+  ) {
     return new Promise((resolve, reject) => {
       this.util.showLoader();
       try {
@@ -138,28 +147,28 @@ export class graphql {
               email: email,
               phoneNumber: phoneNumber,
               password: password,
+              role: role,
+              Address: Address
             },
-            errorPolicy: 'all'
+            errorPolicy: 'all',
           })
           .subscribe(
             ({ data }) => {
               this.util.hideLoader();
-              console.log('got data', data)
+              console.log('got data', data);
               resolve(data);
             },
-            error => {
+            (error) => {
               this.util.hideLoader();
-              console.log('there was an error sending the query', error)
-              this.util.presentFailureToast(error, "");
+              console.log('there was an error sending the query', error);
+              this.util.presentFailureToast(error, '');
             }
           );
       } catch (error) {
         this.util.hideLoader();
-        this.util.presentFailureToast(error, "");
+        this.util.presentFailureToast(error, '');
         reject(error);
       }
     });
   }
-
-
 }
