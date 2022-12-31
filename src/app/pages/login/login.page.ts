@@ -7,24 +7,18 @@ import { BasePage } from '../base/base';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage extends BasePage implements OnInit {
-  constructor(injector: Injector) { 
+  constructor(injector: Injector) {
     super(injector);
    }
   currentUser: any
   signIn: boolean = true
   signUp: boolean = false
   phoneVerification: boolean = false
-  params:any = this.nav.getQueryParams()
-  role:string = this.params.type;
+
+
 
   async ngOnInit() {
-    console.log(this.role);
-    this.currentUser = JSON.parse(await this.storageService.get("currentUser"));
-    if(this.currentUser.role === "student"){
-      this.nav.navigateTo('student');
-    } else if(this.currentUser.role === "therapist"){
-      this.nav.navigateTo('therapist');
-    }
+
   }
 
   signUP(){

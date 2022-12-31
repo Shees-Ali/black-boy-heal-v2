@@ -6,9 +6,10 @@ import { MenuController, Platform } from '@ionic/angular';
 import { ModalService } from 'src/app/services/basic/modal.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { StorageService } from 'src/app/services/basic/storage.service';
-import { graphql } from 'src/app/services/graphql';
+import { FormBuilder } from '@angular/forms';
 
 export abstract class BasePage {
+  public formBuilder: FormBuilder;
   public utility: UtilityService;
   public nav: NavService;
   public location: Location;
@@ -17,9 +18,10 @@ export abstract class BasePage {
   public domSanitizer: DomSanitizer;
   public storageService: StorageService;
   public platform: Platform;
-  public graphql: graphql;
 
   constructor(injector: Injector) {
+
+    this.formBuilder = injector.get(FormBuilder);
     this.platform = injector.get(Platform);
     this.utility = injector.get(UtilityService);
     this.location = injector.get(Location);
@@ -28,6 +30,5 @@ export abstract class BasePage {
     this.menuCtrl = injector.get(MenuController);
     this.storageService = injector.get(StorageService);
     this.domSanitizer = injector.get(DomSanitizer);
-    this.graphql = injector.get(graphql);
   }
 }

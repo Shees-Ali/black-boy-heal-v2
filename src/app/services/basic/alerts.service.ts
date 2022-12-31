@@ -34,23 +34,39 @@ export class AlertsService {
     });
   }
 
-  async presentSuccessToast(msg: string, cssClass: any) {
+  async presentSuccessToast(msg: string) {
     const toast = await this.toastCtrl.create({
       message: this.strings.capitalizeEachFirst(msg),
       duration: 5000,
       position: 'top',
-      cssClass: cssClass,
+      cssClass: 'successToast',
+      buttons: [
+        {
+            side: 'end',
+            icon: 'close-outline',
+            role: 'cancel',
+            cssClass: 'icon-class'
+        }
+    ]
     });
 
     toast.present();
   }
 
-  async presentFailureToast(msg: string, cssClass: any) {
+  async presentFailureToast(msg: string) {
     const toast = await this.toastCtrl.create({
       message: this.strings.capitalizeEachFirst(msg ? msg : 'ERROR'),
       duration: 5000,
       position: 'top',
-      cssClass: cssClass,
+      cssClass: 'failureToast',
+      buttons: [
+        {
+            side: 'end',
+            icon: 'close-outline',
+            role: 'cancel',
+            cssClass: 'icon-class'
+        }
+    ]
     });
 
     toast.present();

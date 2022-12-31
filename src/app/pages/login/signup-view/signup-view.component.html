@@ -3,40 +3,29 @@
     <div class="signup-outer">
       <div class="signup-inner">
         <h1 class="bebas">SIGN UP</h1>
-        <ion-list class="input-main">
-          <ion-item color="dark" class="input-item input">
-            <ion-input color="light" placeholder="Full Name" [(ngModel)]="fullName" type="text"></ion-input>
-          </ion-item>
-          <ion-item color="dark" class="input-item input">
-            <ion-input
-              color="light"
-              placeholder="Your E-Mail Address"
-              [(ngModel)]="email" type="email"
-            ></ion-input>
-          </ion-item>
-          <ion-item color="dark" class="input-item input">
-            <ion-input color="light" placeholder="Phone Number" [(ngModel)]="phoneNumber" type="number"></ion-input>
-          </ion-item>
-          <ion-item color="dark" class="input-item input">
-            <ion-input color="light" placeholder="Password" [(ngModel)]="password" type="password"></ion-input>
-          </ion-item>
-          <ion-item class="input input-item" lines="none">
-            <ion-checkbox  [(ngModel)]="condition"  color="dark" slot="start"></ion-checkbox>
-            <ion-label class="check-label"
-              >By continuing you accept our Privacy policy</ion-label
-            >
-          </ion-item>
-          <div class="mb-rt">
-            <ion-button
-              (click)="signUp()"
-              class="button"
-              color="primary"
-              expand="block"
-              >SIGN UP</ion-button
-            >
-          </div>
-        </ion-list>
-        <!-- <div class="bebas forgot">FORGOT PASSWORD</div> -->
+        <form [formGroup]="aForm">
+          <ion-list class="input-main">
+            <ion-item color="dark" class="input-item input">
+              <ion-input color="light" placeholder="Full Name"  formControlName="name" type="text"></ion-input>
+            </ion-item>
+            <ion-item color="dark" class="input-item input">
+              <ion-input color="light" placeholder="Your E-Mail Address"  formControlName="email" type="email"></ion-input>
+            </ion-item>
+            <ion-item color="dark" class="input-item input">
+              <ion-input color="light" placeholder="Phone Number" formControlName="phone_number" type="number"></ion-input>
+            </ion-item>
+            <ion-item color="dark" class="input-item input">
+              <ion-input color="light" placeholder="Password" formControlName="password" type="password"></ion-input>
+            </ion-item>
+            <ion-item class="input input-item" lines="none">
+              <ion-checkbox formControlName="condition" color="dark" slot="start"></ion-checkbox>
+              <ion-label class="check-label">By continuing you accept our Privacy policy</ion-label>
+            </ion-item>
+            <div class="mb-rt">
+              <ion-button (click)="signUp()" class="button" color="primary" expand="block">SIGN UP</ion-button>
+            </div>
+          </ion-list>
+        </form>
       </div>
 
       <div class="signup-with-main">

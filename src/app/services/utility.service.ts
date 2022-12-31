@@ -35,12 +35,12 @@ export class UtilityService {
     return this.alerts.presentToast(msg);
   }
 
-  presentSuccessToast(msg: any, cssClass: any) {
-    return this.alerts.presentSuccessToast(msg, cssClass);
+  presentSuccessToast(msg: any) {
+    return this.alerts.presentSuccessToast(msg);
   }
 
-  presentFailureToast(msg: any, cssClass: any) {
-    return this.alerts.presentFailureToast(msg, cssClass);
+  presentFailureToast(msg: any) {
+    return this.alerts.presentFailureToast(msg);
   }
 
   presentConfirm(
