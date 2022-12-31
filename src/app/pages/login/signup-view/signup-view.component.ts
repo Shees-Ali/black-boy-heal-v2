@@ -63,37 +63,13 @@ export class SignupViewComponent extends BasePage implements OnInit {
 
   async signUp() {
 
-    console.log(this.aForm.invalid);
-
-    this.submitted = true;
-
     if(this.aForm.invalid){
-
-      const res = await this.findInvalidControls(this.aForm);
-      console.log(res);
-
-      let first = res[0];
-
-      let label = first['con'];
-
-      if(first.error?.['required']){
-        this.errorMessage = label + " is required";
-      }
-
-      if(first.error?.['minlength']){
-        this.errorMessage = label + " at least " + first.error?.['minlength'].requiredLength + " characters";
-      }
-
-      if(first.error?.['maxlength']){
-        this.errorMessage = label + " at most " + first.error?.['maxlength'].requiredLength + " characters";
-      }
-
-      if(first.error?.['pattern']){
-        this.errorMessage = label + " should be like " + first.error?.['pattern'].requiredPattern + " pattern";
-      }
-
-      this.utility.presentFailureToast(this.errorMessage);
+      const err = this.formErrors.getFirstFormError(this.aForm);
+      this.utility.presentFailureToast(err);
     }
+
+    // submit form with respect to signup
+
 
 
 
@@ -104,18 +80,6 @@ export class SignupViewComponent extends BasePage implements OnInit {
 
   }
 
-  findInvalidControls(f: FormGroup) {
-    const invalid = [];
-    const controls = f.controls;
-    for (const name in controls) {
-      if (controls[name].invalid) {
-        invalid.push({
-          con: name,
-          error: controls[name].errors
-        });
-      }
-    }
-    return invalid;
-  }
+
 
 }

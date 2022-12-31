@@ -7,8 +7,10 @@ import { ModalService } from 'src/app/services/basic/modal.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { StorageService } from 'src/app/services/basic/storage.service';
 import { FormBuilder } from '@angular/forms';
+import { FormErrorsService } from 'src/app/services/basic/form-errors.service';
 
 export abstract class BasePage {
+  public formErrors: FormErrorsService;
   public formBuilder: FormBuilder;
   public utility: UtilityService;
   public nav: NavService;
@@ -20,7 +22,7 @@ export abstract class BasePage {
   public platform: Platform;
 
   constructor(injector: Injector) {
-
+    this.formErrors = injector.get(FormErrorsService);
     this.formBuilder = injector.get(FormBuilder);
     this.platform = injector.get(Platform);
     this.utility = injector.get(UtilityService);
