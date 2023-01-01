@@ -1,4 +1,5 @@
 import { Component, Injector, OnInit, Output, EventEmitter } from '@angular/core';
+import { FormGroup, Validators } from '@angular/forms';
 import { BasePage } from '../../base/base';
 
 @Component({
@@ -8,34 +9,66 @@ import { BasePage } from '../../base/base';
 })
 
 export class LoginViewComponent extends BasePage implements OnInit {
-  constructor(injector: Injector) {
-    super(injector);
-  }
-  email: string = ""
-  password: string = ""
+
+  aForm: FormGroup;
+  submitted = false;
 
   @Output() signUpEvent = new EventEmitter<string>();
+
+  constructor(injector: Injector) {
+    super(injector);
+    this.setupForm()
+  }
+
+  setupForm() {
+    const re = /\S+@\S+\.\S+/;
+
+    this.aForm = this.formBuilder.group({
+      email: ['lorem259@mail.com', Validators.compose([Validators.required, Validators.email])],
+      password: [
+        '12345678',
+        Validators.compose([
+          Validators.minLength(8),
+          Validators.maxLength(30),
+          Validators.required,
+        ]),
+      ],
+    });
+  }
 
   ngOnInit() { }
 
   async signIn() {
-    const lU: any =  // await this.graphql.loginUser(this.email, this.password);
-    // if (lU?.signIn.fullName) {
-    //   const data = JSON.stringify(lU.signIn);
-    //   this.storageService.set("currentUser", data);
-    //   this.storageService.set("token", lU.signIn.token);
-    //   this.storageService.set("type", lU.signIn.role);
-    //   if (lU.signIn.role === "student") {
-    //     this.nav.navigateTo('student');
-    //   } else if (lU.signIn.role === "therapist") {
-    //     this.nav.navigateTo('therapist');
-    //   }
-      this.nav.navigateTo('therapist');
 
-    // }
+    if(this.aForm.invalid){
+      const err = this.formErrors.getFirstFormError(this.aForm);
+      this.utility.presentFailureToast(err);
+      return;
+    }
+
+    // submit form with respect to signup
+    let form = this.aForm.value
+    const res = await this.users.login(form);
+
+    if(res){
+
+      if(res['role'].name == 'student'){
+        this.nav.navigateTo('student');
+      } else if(res['role'].name == 'therapist'){
+        this.nav.navigateTo('therapist');
+      } else{
+        this.nav.push('select-role');
+      }
+
+    }
+
+
+
   }
+
 
   signUp() {
     this.signUpEvent.emit();
   }
+
 }

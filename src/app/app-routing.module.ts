@@ -12,6 +12,7 @@ const routes: Routes = [
     redirectTo: 'pages',
     pathMatch: 'full',
   },
+
 ];
 
 @NgModule({

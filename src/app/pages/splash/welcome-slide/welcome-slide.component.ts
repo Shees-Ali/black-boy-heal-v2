@@ -6,8 +6,13 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./welcome-slide.component.scss'],
 })
 export class WelcomeSlideComponent implements OnInit {
-  @Output('slideNext') slideNext: EventEmitter<void> = new EventEmitter();
+  @Output('slideNext') slideNext: EventEmitter<any> = new EventEmitter();
   constructor() {}
 
   ngOnInit() {}
+
+  moveNext(){
+    console.log("next");
+    this.slideNext.emit({v: 1})
+  }
 }

@@ -16,8 +16,18 @@ export class SplashPage extends BasePage implements OnInit {
 
   ngOnInit() {}
 
-  slideNext() {
-    console.log("HERE");
-    this.swiper?.swiperRef.slideNext();
+  slideNext($event = null) {
+    console.log("HERE", $event);
+    if($event?.['v']){
+      if($event?.['v'] == 5){
+        this.nav.push(['/login'])
+      } else {
+        this.swiper?.swiperRef.slideTo($event?.['v'])
+      }
+
+    } else {
+      this.swiper?.swiperRef.slideNext();
+    }
+
   }
 }

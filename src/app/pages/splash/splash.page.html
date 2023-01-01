@@ -1,40 +1,40 @@
 <div class="custom-ion-content">
-  <swiper>
+  <swiper #swiper>
     <ng-template swiperSlide>
       <app-welcome-slide
-        (slideNext)="slideNext()"
+        (slideNext)="slideNext($event)"
         class="full-width-height-23464"
       ></app-welcome-slide>
     </ng-template>
     <ng-template swiperSlide>
       <app-care-slide
-        (slideNext)="slideNext()"
+        (slideNext)="slideNext($event)"
         class="full-width-height-23464"
       ></app-care-slide>
     </ng-template>
     <ng-template swiperSlide>
       <app-reps-slide
-        (slideNext)="slideNext()"
+        (slideNext)="slideNext($event)"
         class="full-width-height-23464"
       ></app-reps-slide>
     </ng-template>
     <ng-template swiperSlide>
       <app-reach-slide
-        (slideNext)="slideNext()"
+        (slideNext)="slideNext($event)"
         class="full-width-height-23464"
       ></app-reach-slide>
     </ng-template>
     <ng-template swiperSlide>
       <app-join-slide
-        (slideNext)="slideNext()"
+        (slideNext)="slideNext($event)"
         class="full-width-height-23464"
       ></app-join-slide>
     </ng-template>
-    <ng-template swiperSlide>
+    <!-- <ng-template swiperSlide>
       <app-option-slide
         (slideNext)="slideNext()"
         class="full-width-height-23464"
       ></app-option-slide>
-    </ng-template>
+    </ng-template> -->
   </swiper>
 </div>

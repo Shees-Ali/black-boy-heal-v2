@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-reach-slide',
@@ -7,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReachSlideComponent implements OnInit {
 
+  @Output('slideNext') slideNext: EventEmitter<any> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {}
+
+
+  moveNext(){
+    console.log("next");
+    this.slideNext.emit({v: 4})
+  }
 
 }

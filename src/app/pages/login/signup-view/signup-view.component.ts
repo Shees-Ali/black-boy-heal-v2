@@ -17,7 +17,6 @@ export class SignupViewComponent extends BasePage implements OnInit {
 
   aForm: FormGroup;
   submitted = false;
-  errorMessage = "";
 
   constructor(injector: Injector) {
     super(injector);
@@ -29,18 +28,18 @@ export class SignupViewComponent extends BasePage implements OnInit {
 
     this.aForm = this.formBuilder.group({
       name: [
-        '',
+        'lorem ipsum',
         Validators.compose([
           Validators.minLength(3),
-          Validators.maxLength(10),
+          Validators.maxLength(30),
           Validators.pattern('[a-zA-Z ]*'),
           Validators.required,
         ]),
       ],
-      email: ['', Validators.compose([Validators.required, Validators.email])],
+      email: ['lorem@mail.com', Validators.compose([Validators.required, Validators.email])],
       // phone: ['', Validators.compose([Validators.required])],
       password: [
-        '',
+        '12345678',
         Validators.compose([
           Validators.minLength(8),
           Validators.maxLength(30),
@@ -48,7 +47,7 @@ export class SignupViewComponent extends BasePage implements OnInit {
         ]),
       ],
       phone_number: [
-        '',
+        '1234567890',
         Validators.compose([
           Validators.minLength(8),
           Validators.maxLength(15),
@@ -66,9 +65,16 @@ export class SignupViewComponent extends BasePage implements OnInit {
     if(this.aForm.invalid){
       const err = this.formErrors.getFirstFormError(this.aForm);
       this.utility.presentFailureToast(err);
+      return;
     }
 
     // submit form with respect to signup
+    let form = this.aForm.value
+    const res = await this.users.register(form);
+    if(res){
+      this.nav.push('select-role');
+    }
+
 
 
 

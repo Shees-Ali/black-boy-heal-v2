@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '../services/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'splash',
+    redirectTo: 'select-role',
     pathMatch: 'full',
+
+
   },
   {
     path: 'splash',
@@ -27,10 +30,17 @@ const routes: Routes = [
     loadChildren: () =>
       import('./therapist/therapist.module').then((m) => m.TherapistPageModule),
   },
+  {
+    path: 'select-role',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./select-role/select-role.module').then( m => m.SelectRolePageModule)
+  },
+
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
+  providers: [AuthGuard]
 })
 export class PagesRoutingModule {}
