@@ -23,6 +23,7 @@
     "@apollo/client": "^3.7.3",
     "@capacitor/android": "4.6.1",
     "@capacitor/app": "4.1.1",
+    "@capacitor/browser": "^4.1.0",
     "@capacitor/core": "4.6.1",
     "@capacitor/haptics": "4.1.0",
     "@capacitor/keyboard": "4.1.0",

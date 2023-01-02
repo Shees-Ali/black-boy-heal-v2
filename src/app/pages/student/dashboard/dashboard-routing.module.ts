@@ -9,6 +9,11 @@ const routes: Routes = [
     component: DashboardPage
   }
 ];
+import { Browser } from '@capacitor/browser';
+
+const openCapacitorSite = async () => {
+  await Browser.open({ url: 'http://localhost/book-anim/mobile/index.html' });
+};
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

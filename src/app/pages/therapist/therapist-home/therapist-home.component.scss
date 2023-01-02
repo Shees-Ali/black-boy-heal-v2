@@ -10,7 +10,7 @@
       // border: 1px solid red;
       width: 355px;
       height: 64px;
-      margin-left: 15px;
+      margin-left: 20px;
       // margin: auto;
       display: flex;
       // justify-content: space-between;
@@ -47,14 +47,14 @@
   .search-bar {
     // border: 1px solid red;
     width: 345px;
-    height: 48px;
+    // height: 48px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto;
     margin-top: 16px;
     ion-searchbar {
-      margin-left: -8px;
+      margin-left: -18px;
 
       --icon-color: #8b8d8c;
       ::ng-deep {
@@ -70,14 +70,18 @@
             height: 48px;
             text-align: left;
 
-            //any style that you want to implement on your searchbar
+            // any style that you want to implement on your searchbar
           }
         }
       }
     }
+
+
+
     .icon-div {
       height: 48px;
       width: 48px;
+      margin-top: 13px;
       border-radius: 12px;
       display: flex;
       justify-content: center;
@@ -91,6 +95,7 @@
     // border: 1px solid red;
     color: #ffffff;
     margin: 15px auto;
+    margin-top: 30px;
     text-align: left;
     span {
       margin-left: 13px;
@@ -168,7 +173,7 @@
     // border: 1px solid red;
     width: 345px;
     margin: auto;
-    margin-left: 15px;
+    margin-left: 18px;
     color: #ffffff;
     text-align: left;
     font-size: 16px;
@@ -176,7 +181,7 @@
   }
   .lessons {
     height: 154px;
-    width: 328px;
+    width: 355px;
     // border: 1px solid red;
     // margin: auto;
 
@@ -184,18 +189,19 @@
     background: #293132;
     text-align: left;
     border-radius: 12px;
-    margin-left: 15px;
+    margin-left: 18px;
     .lessons-inner {
       // border: 1px solid red;
       width: 328px;
       height: 154px;
-      margin-top: 15px;
+      margin-top: 18px;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
       .circle {
         width: 126px;
         height: 126px;
+        margin-left: 15px;
         .circle-inner {
           border: 6px solid white;
           border-radius: 50%;
@@ -211,6 +217,7 @@
         width: 163px;
         height: 126px;
         text-align: left;
+        margin-left: 15px;
         .number {
           height: 34px;
           width: 56px;
