@@ -19,7 +19,6 @@ import { DashboardPageModule } from '../dashboard/dashboard.module';
     TherapistDirectoryPageRoutingModule,
     SharedModule,
     SwiperModule,
-    DashboardPageModule
   ],
   declarations: [TherapistDirectoryPage],
 })

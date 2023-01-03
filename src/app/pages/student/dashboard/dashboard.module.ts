@@ -16,7 +16,7 @@ import { DashboardMyprofileBoxComponent } from './dashboard-myprofile-box/dashbo
 import { DashboardFindTherapistBoxComponent } from './dashboard-find-therapist-box/dashboard-find-therapist-box.component';
 import { DashboardShopBoxComponent } from './dashboard-shop-box/dashboard-shop-box.component';
 import { SharedModule } from 'src/app/components/shared.module';
-
+import { SwiperModule } from 'swiper/angular';
 @NgModule({
   imports: [
     CommonModule,
@@ -24,6 +24,7 @@ import { SharedModule } from 'src/app/components/shared.module';
     FormsModule,
     IonicModule,
     DashboardPageRoutingModule,
+    SwiperModule,
   ],
   declarations: [
     DashboardPage,
