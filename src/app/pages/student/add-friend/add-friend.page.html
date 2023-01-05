@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-segment [(ngModel)]="currDiv">
+    <ion-segment-button value="A" type="button" (click)="ShowDiv('A')">
+      <ion-label>My Friends</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="B" type="button" (click)="ShowDiv('B')">
+      <ion-label>Suggetions</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+<ion-content>
+  <ion-grid class="friends" *ngIf="currDiv ==='A'">
+    <ion-row>
+      <ion-col size="6" *ngFor="let item of array">
+        <app-friends></app-friends>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="friends" class="friends" *ngIf="currDiv ==='B'">
+    <ion-row>
+      <ion-col size="6" *ngFor="let item of array">
+        <app-friends></app-friends>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
