@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { resolve } from 'dns';
 import { NetworkService } from './network.service';
 
 @Injectable({
@@ -15,6 +16,7 @@ export class UsersService {
       console.log(res);
 
       if(res && res.token){
+        localStorage.setItem('user', JSON.stringify(res))
         localStorage.setItem('token', res.token)
         resolve(res);
       } else {
@@ -29,7 +31,7 @@ export class UsersService {
 
   register(data){
 
-    return new Promise( async resolve => {
+    return new Promise( async (resolve) => {
       const res = await this.network.register(data);
       console.log(res);
 
@@ -70,6 +72,32 @@ export class UsersService {
       const res = await this.network.setUserRole(data);
       resolve(res);
 
+    })
+  }
+
+  updateUserProfile(data){
+    return new Promise(async (resolve)=>{
+      const res = await this.network.updateUserProfile(data);
+      console.log(res);
+      if(res){
+        // localStorage.setItem('token', res.token)
+        resolve(true);
+      } else {
+        resolve(false);
+      }
+    })
+  }
+
+  getUserProfile(){
+    return new Promise(async (resolve)=>{
+      const res = await this.network.getUserData();
+      console.log(res);
+      if(res){
+        // localStorage.setItem('token', res.token)
+        resolve(res);
+      } else {
+        resolve(false);
+      }
     })
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavService } from 'src/app/services/nav.service';
 
 @Component({
   selector: 'app-dashboard-myprofile-box',
@@ -7,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardMyprofileBoxComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(public nav: NavService) { }
 
   ngOnInit() {}
+
+  gotoMyProfile(){
+    this.nav.push('/student/my-profile')
+  }
 
 }

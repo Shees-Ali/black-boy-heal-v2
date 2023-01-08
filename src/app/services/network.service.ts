@@ -30,16 +30,24 @@ export class NetworkService {
     return this.httpPostResponse('auth/login', data, null, true);
   }
 
+  updateUserProfile(data){
+    return this.httpPostResponse('auth/update-user-profile', data, null, true);
+  }
+
   register(data) {
     return this.httpPostResponse('auth/register', data, null, true);
   }
 
-  checkUserRole(){
+  checkUserRole() {
     return this.httpGetResponse('auth/user-role', null, false, false);
   }
 
   setUserRole(data){
     return this.httpPostResponse('auth/user-role', data, null, false, true);
+  }
+
+  getUserData(){
+    return this.httpGetResponse('auth/get-user-profile', null, false, true);
   }
 
 

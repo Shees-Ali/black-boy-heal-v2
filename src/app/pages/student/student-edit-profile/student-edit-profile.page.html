@@ -1,0 +1,54 @@
+<ion-header>
+  <div class="header">
+    <img src="assets/images/cover.1.png" />
+    <div class="main-img">
+      <img src="assets/images/123.png" alt="" />
+      <h5>CHANGE PROFILE AVATAR</h5>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div class="inputs">
+    <form [formGroup]="aForm">
+      <div class="box">
+        <label for="username" class="poppins">Username</label>
+        <input
+          type="text"
+          name="username"
+          placeholder="@Username"
+          formControlName="username"
+        />
+      </div>
+      <div class="box">
+        <label for="About" class="poppins">About</label>
+        <input
+          class="about"
+          type="text"
+          name="about"
+          formControlName="about"
+        />
+      </div>
+      <div class="box">
+        <label for="username" class="poppins">Location</label>
+        <input
+          type="Text"
+          name="location"
+          placeholder="Seattle, Washington"
+          formControlName="location"
+        />
+      </div>
+
+      <div class="box">
+        <label for="username" class="poppins">Your Birthday</label>
+        <input
+          type="date"
+          name="date"
+          placeholder="01/01/2005"
+          formControlName="birthday"
+        />
+      </div>
+      <ion-button (click)="updateProfile()">SAVE SETTINGS</ion-button>
+    </form>
+  </div>
+</ion-content>

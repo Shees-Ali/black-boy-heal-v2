@@ -5,10 +5,8 @@ import { AuthGuard } from '../services/auth.guard';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'select-role',
+    redirectTo: 'splash',
     pathMatch: 'full',
-
-
   },
   {
     path: 'splash',
@@ -35,6 +33,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     loadChildren: () => import('./select-role/select-role.module').then( m => m.SelectRolePageModule)
   },
+
 
 ];
 

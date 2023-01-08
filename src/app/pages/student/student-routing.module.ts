@@ -56,6 +56,14 @@ const routes: Routes = [
             (m) => m.TherapistDirectoryPageModule
           ),
       },
+      {
+        path: 'my-profile',
+        loadChildren: () => import('./my-profile/my-profile.module').then( m => m.MyProfilePageModule)
+      },
+      {
+        path: 'student-edit-profile',
+        loadChildren: () => import('./student-edit-profile/student-edit-profile.module').then( m => m.StudentEditProfilePageModule)
+      },
     ],
   },
 ];
