@@ -23,12 +23,16 @@ export class SelectRolePage extends BasePage implements OnInit {
   }
 
   async checkUserRole(){
+
+    this.loading = true;
     const res = await this.users.checkRole();
-    console.log(res);
 
-    if(res){
-
+    if(!res){
+      this.loading = false;
+      return;
     }
+
+    this.nav.navigateTo(res);
   }
 
   async setUserRole(type: string){

@@ -17,7 +17,8 @@
       </div>
 
       <div (click)="moveNext()" class="mb-rt">
-        <img src="assets/images/puzzle-aero.png" />
+        <ion-spinner *ngIf="loading" ></ion-spinner>
+        <img *ngIf="!loading" src="assets/images/puzzle-aero.png" />
       </div>
     </div>
   </div>

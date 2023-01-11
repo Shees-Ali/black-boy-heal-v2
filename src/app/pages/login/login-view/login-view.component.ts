@@ -52,13 +52,13 @@ export class LoginViewComponent extends BasePage implements OnInit {
 
     if(res){
 
-      if(res['role'].name == 'student'){
+      // if(res['role'].name == 'student'){
         this.nav.navigateTo('student');
-      } else if(res['role'].name == 'therapist'){
-        this.nav.navigateTo('therapist');
-      } else{
-        this.nav.push('select-role');
-      }
+      // } else if(res['role'].name == 'therapist'){
+      //   this.nav.navigateTo('therapist');
+      // } else{
+      //   this.nav.push('select-role');
+      // }
 
     }
 

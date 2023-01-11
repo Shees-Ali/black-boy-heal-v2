@@ -7,6 +7,8 @@ import { BasePage } from '../../base/base';
   styleUrls: ['./my-profile.page.scss'],
 })
 export class MyProfilePage extends BasePage implements OnInit {
+[x: string]: any;
+friends: any;
 
   constructor(injector: Injector) {
     super(injector)
@@ -17,6 +19,10 @@ export class MyProfilePage extends BasePage implements OnInit {
 
   studentEditProfile(param = null){
     this.nav.push('student/student-edit-profile')
+  }
+
+  gotoaddfriends(peram = null){
+    this.nav.push('/student/add-friend')
   }
 
 }

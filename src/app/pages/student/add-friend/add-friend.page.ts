@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NetworkService } from 'src/app/services/network.service';
 
 @Component({
   selector: 'app-add-friend',
@@ -8,16 +9,38 @@ import { Component, OnInit } from '@angular/core';
 export class AddFriendPage implements OnInit {
   currDiv: string = 'A';
 
-  array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+  friendList: any[] = [];
+
+
+  requestlist: any[] = [];
+
+  myfriendList: any[] = [];
 
   ShowDiv(divVal: string) {
     this.currDiv = divVal;
   }
 
-  constructor() { }
+  constructor(private network: NetworkService) {}
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this.network.getAllUsers().then((res) => {
+      this.friendList = res;
+      console.log('getting friends', res);
+    });
 
+    const data = {
+      request_id: 1,
+      approved: 1,
+    };
+
+    await this.network.getMyFriendRequest().then((res) => {
+      this.requestlist = res;
+      console.log('Requests');
+    });
+
+    await this.network.getMyFriendRequest().then((res) => {
+      this.myfriendList = res;
+      console.log('Requests');
+    });
   }
-
 }

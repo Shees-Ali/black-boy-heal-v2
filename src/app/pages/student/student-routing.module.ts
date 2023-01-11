@@ -64,6 +64,10 @@ const routes: Routes = [
         path: 'student-edit-profile',
         loadChildren: () => import('./student-edit-profile/student-edit-profile.module').then( m => m.StudentEditProfilePageModule)
       },
+      {
+        path: 'add-friend',
+        loadChildren: () => import('./add-friend/add-friend.module').then( m => m.AddFriendPageModule)
+      },
     ],
   },
 ];

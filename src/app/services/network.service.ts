@@ -26,6 +26,18 @@ export class NetworkService {
     return str.join('&');
   };
 
+  getAllUsers(){
+    return this.httpGetResponse('get-all-users', null, true, true);
+  }
+
+  getMyFriendRequest(){
+    return this.httpGetResponse('get-my-friend-requests', null, true, true);
+  }
+
+  getMyFriend(){
+    return this.httpGetResponse('get-my-friend', null, true, true);
+  }
+
   login(data) {
     return this.httpPostResponse('auth/login', data, null, true);
   }
@@ -50,6 +62,13 @@ export class NetworkService {
     return this.httpGetResponse('auth/get-user-profile', null, false, true);
   }
 
+  isUserLoggedIn(){
+    return this.httpGetResponse('auth/is-user-logged-in', null, false, false, 'application/json', true );
+  }
+
+  requestToBecomeFriends(data){
+    return this.httpPostResponse('request-to-become-friends',data, null, true, true);
+  }
 
 
   httpPostResponse(
@@ -76,7 +95,8 @@ export class NetworkService {
     id = null,
     showloader = false,
     showError = true,
-    contenttype = 'application/json'
+    contenttype = 'application/json',
+    returnAllResponse = false
   ) {
     return this.httpResponse(
       'get',
@@ -85,7 +105,8 @@ export class NetworkService {
       id,
       showloader,
       showError,
-      contenttype
+      contenttype,
+      returnAllResponse
     );
   }
 
@@ -160,7 +181,8 @@ export class NetworkService {
     id = null,
     showloader = false,
     showError = true,
-    contenttype = 'application/json'
+    contenttype = 'application/json',
+    returnAllResponse = false
   ): Promise<any> {
     return new Promise((resolve, reject) => {
       if (showloader === true) this.utility.showLoader();
@@ -181,8 +203,18 @@ export class NetworkService {
             if (showError) {
               this.utility.presentSuccessToast(res.message);
             }
+
+            if(returnAllResponse){
+              resolve(res);
+              return;
+            }
             reject(null);
           } else {
+
+            if(returnAllResponse){
+              resolve(res);
+              return;
+            }
             resolve(res.data);
           }
         },
@@ -199,7 +231,17 @@ export class NetworkService {
               this.utility.presentFailureToast(err.message);
             }
 
+            if(returnAllResponse){
+              resolve(err);
+              return;
+            }
+
             reject(null);
+          }
+
+          if(returnAllResponse){
+            resolve(err);
+            return;
           }
 
         }

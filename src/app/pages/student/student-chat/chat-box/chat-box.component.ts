@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chat-box.component.scss'],
 })
 export class ChatBoxComponent implements OnInit {
+massage: any;
   constructor() {}
 
   ngOnInit() {}

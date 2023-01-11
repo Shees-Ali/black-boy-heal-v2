@@ -13,9 +13,13 @@ import { HttpLink } from 'apollo-angular/http';
 import { InMemoryCache } from '@apollo/client/core';
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
+
 // import firebase from 'firebase/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { InterceptorService } from './services/interceptor.service';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,7 +27,10 @@ import { InterceptorService } from './services/interceptor.service';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
     ApolloModule,
+    AngularFireModule,
     HttpClientModule,
   ],
   providers: [
